@@ -1,0 +1,55 @@
+body {
+  background-color: #c3829e
+
+}
+
+#navBar table{
+  background-color: #fcd1d7;
+  border: 2px solid black;
+  width: 85%;
+  margin: 10px auto;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+#navBar { 
+  margin: 10px auto;
+  padding-top: 1%;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-bottom: 4%;
+}
+
+#logo {
+  float: left;
+  margin-left: 3%;
+}
+
+#body{
+  float: clear;
+  background-color: #fcd1d7;
+  border: 2px solid black;
+  width: 90%;
+  margin-left: 4%;
+  margin-right: 4%;
+  overflow: auto;
+}
+
+#footer {
+  text-align: center;
+}
+
+#map {
+  width: 85%;
+  margin: 10px auto;
+}
+
+#description {
+
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
