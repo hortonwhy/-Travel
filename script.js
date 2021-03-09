@@ -24,7 +24,7 @@ function createBox (node, xX, yY) {
     boxDiv.style.top = yY+"px";
 
     console.log(boxDiv);
-    box.innerHTML = "<strong>HEYYY!!!!!</strong>";
+    box.innerHTML = "<strong>HEYYY!!!!!</strong> <br> <strong> you clicked on " + node.name + "</strong>";
     showingDetail = true; // html is added. therefore if clicked again it should delete it
   }
  }
