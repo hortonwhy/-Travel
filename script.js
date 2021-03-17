@@ -29,3 +29,8 @@ function createBox (node, xX, yY) {
   }
  }
 
+
+function echo (name) {
+  //document.getElementById('japan').firstChild.data = name;
+  console.log(name)
+}
