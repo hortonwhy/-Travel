@@ -113,6 +113,7 @@
 <script type="text/javascript"><![CDATA[
 function displayName(name) {
 	document.getElementById('test').firstChild.data = name;
+	document.getElementById('testP').firstChilddata = name;
 	}
 	]]></script>
 </svg>
