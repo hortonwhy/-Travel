@@ -1,14 +1,11 @@
 var showingDetail = false;
-<<<<<<< HEAD
 var mouseX, mouseY;
 
-/
-  save mousePos for creating a box later
+  //save mousePos for creating a box later
 function getMousePos(event) {
   mouseX = event.clientX; mouseY = event.clientY;
 }
 document.addEventListener("click", getMousePos);
-=======
 var OFFSETX = 100;
 var OFFSETY = 100;
 
@@ -19,9 +16,9 @@ function showDetail (region) {
 
 }
 
-function createBox (node, name, xX, yY) {
-=======
+
 function createBox (event, node, name) {
+  console.log(node);
   console.log(event.clientX);
 
   if (showingDetail) {
@@ -32,7 +29,7 @@ function createBox (event, node, name) {
     }
   } else {
     var mapNode = node.parentNode.parentNode;
-    var boxDiv = document.createElement("div"); 
+    var boxDiv = document.createElement("div");
     var box = document.createElement("p");
     boxDiv.setAttribute("id", "details");
     mapNode.appendChild(boxDiv);
@@ -48,10 +45,15 @@ function createBox (event, node, name) {
   }
  }
 
-
 function echo (name) {
   //document.getElementById('japan').firstChild.data = name;
   console.log(name)
 function displayName (name) {
   document.getElementById('testP').innerHTML = name;
+}
+
+// should just be the id for the form
+function validateMail(id) {
+  emailForm = document.getElementById(id);
+  console.log(emailForm)
 }
