@@ -113,7 +113,11 @@
 <script type="text/javascript"><![CDATA[
 function displayName(name) {
 	document.getElementById('test').firstChild.data = name;
+<<<<<<< HEAD
 	document.getElementById('test').innerHTML = "HWEOEWHFOWHFOWH";
+=======
+	document.getElementById('testP').firstChilddata = name;
+>>>>>>> 8c58ca2235a43da810ac8613953e7ad884f46dfe
 	}
 	]]></script>
 </svg>
