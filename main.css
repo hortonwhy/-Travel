@@ -24,8 +24,8 @@ body {
 }
 
 #logo {
-  float: left;
   margin-left: 3%;
+  float: left;
 }
 
 #body{
@@ -36,6 +36,24 @@ body {
   margin-left: 4%;
   margin-right: 4%;
   overflow: auto;
+}
+
+#prefBody {
+  clear: both;
+  background-color: #fcd1d7;
+  border: 2px solid black;
+  margin-left: 4%;
+  margin-right: 4%;
+  width: 90%;
+  overflow: hidden;
+
+}
+
+#wrapper {
+  display:inline-block;
+  width: 1000px;
+  height: 100%;
+  overflow:hidden;
 }
 
 #footer {
@@ -57,7 +75,34 @@ body {
   position: absolute;
   border: 1px solid black;
   background-color: #e9b1cd;
+}
 
+#leftSide {
+  float:left;
+  width:65%;
+}
+
+#rightSide {
+  float:right;
+  padding-right: 3%;
+}
+
+#travelSites {
+  border: 2px solid black;
+  margin: 1em;
+}
+
+.pPad {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.iconic-imgs {
+  padding-right: 3%;
+}
+
+.align-center {
+  text-align: center;
 }
 
 .name {
@@ -83,6 +128,7 @@ body {
   grid-template-columns: 50% 50%;
   grid-column-gap: 4%;
   /*grid-template-rows: 10% 10%;*/
+  grid-template-rows: auto auto;
   grid-row-gap: 4%;
 }
 
@@ -90,6 +136,17 @@ body {
   grid-template-columns: 90%;
   display: grid;
   background-color: #ffe7de;
+}
+
+.grid-thumbs {
+  display: flex;
+  background-color: #ffe7de;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-right: 14%;
+  margin-left: 14%;
 }
 
 .center {
