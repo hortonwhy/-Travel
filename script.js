@@ -1,13 +1,13 @@
 var showingDetail = false;
 var mouseX, mouseY;
+var OFFSETX = 20;
+var OFFSETY = -125;
 
   //save mousePos for creating a box later
 function getMousePos(event) {
   mouseX = event.clientX; mouseY = event.clientY;
 }
 document.addEventListener("click", getMousePos);
-var OFFSETX = 100;
-var OFFSETY = 100;
 
 function showDetail (region) {
   element = document.getElementById(region);
@@ -17,7 +17,7 @@ function showDetail (region) {
 }
 
 
-function createBox (event, node, name) {
+function createBox (node, name) {
   console.log(node);
   console.log(event.clientX);
 
@@ -48,6 +48,7 @@ function createBox (event, node, name) {
 function echo (name) {
   //document.getElementById('japan').firstChild.data = name;
   console.log(name)
+}
 function displayName (name) {
   document.getElementById('testP').innerHTML = name;
 }

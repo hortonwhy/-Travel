@@ -92,6 +92,11 @@ body {
   margin: 1em;
 }
 
+.caption {
+  padding: 0px;
+  margin:0 auto;
+}
+
 .pPad {
   padding-left: 1em;
   padding-right: 1em;
