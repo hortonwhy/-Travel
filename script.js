@@ -54,7 +54,12 @@ function displayName (name) {
 }
 
 // should just be the id for the form
-function validateMail(id) {
-  emailForm = document.getElementById(id);
-  console.log(emailForm)
+function validateMail() {
+  var name = document.getElementById("name").value
+  var alpha = /^[a-zA-Z]+$/
+  if (!name.match(alpha)) {
+    alert('Please enter a valid name.')
+}
+  //emailForm = document.getElementById(id);
+  //console.log(emailForm)
 }
