@@ -154,6 +154,11 @@ svg .niigata:hover path.niigata{
   background-color: #ffe7de;
 }
 
+.grid-profile img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .grid-thumbs {
   display: flex;
   background-color: #ffe7de;
