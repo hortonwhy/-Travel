@@ -16,7 +16,6 @@ function showDetail (region) {
 
 }
 
-
 function createBox (node, name) {
   console.log(node);
   console.log(event.clientX);

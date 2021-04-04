@@ -3,6 +3,14 @@ body {
   font-family: Arial;
 }
 
+svg .hyogo:hover path.hyogo{
+  opacity: 0.5;
+}
+
+svg .niigata:hover path.niigata{
+  opacity: 0.5;
+}
+
 #navBar table{
   background-color: #fcd1d7;
   border: 2px solid black;
