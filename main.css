@@ -2,6 +2,9 @@ body {
   background-color: #c3829e;
   font-family: Arial;
 }
+svg {
+      user-select: none;
+}
 
 svg .hyogo:hover path.hyogo{
   opacity: 0.5;
