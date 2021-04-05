@@ -184,3 +184,9 @@ svg .niigata:hover path.niigata{
   line-height: 130%;
   font-family: Arial;
 }
+
+.previewCenter {
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
