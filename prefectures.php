@@ -32,7 +32,7 @@
     <div id="body">
         <div id="description">
             <div id="map">
-              Prefectures Index:
+              <h3 class="align-center">Prefectures Index:</h3>
 		<table border=2 id="prefTable">
 	    <?php
 
