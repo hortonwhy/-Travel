@@ -49,7 +49,7 @@ svg .niigata:hover path.niigata{
   overflow: auto;
 }
 
-#prefBody {
+#prefBody, #animeList {
   clear: both;
   background-color: #fcd1d7;
   border: 2px solid black;
@@ -88,6 +88,12 @@ svg .niigata:hover path.niigata{
   background-color: #e9b1cd;
 }
 
+#details p {
+  padding-top: 0px;
+  margin: 0;
+  border: 1px solid black;
+}
+
 #leftSide {
   float:left;
   width:65%;
@@ -101,6 +107,11 @@ svg .niigata:hover path.niigata{
 #travelSites {
   border: 2px solid black;
   margin: 1em;
+}
+
+#prefTable {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .caption {
@@ -183,4 +194,13 @@ svg .niigata:hover path.niigata{
   font-size: 20px;
   line-height: 130%;
   font-family: Arial;
+}
+
+.previewCenter {
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+
+.previewBtn {
 }

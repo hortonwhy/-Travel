@@ -17,15 +17,17 @@ function showDetail (region) {
 }
 
 function createBox (node, name) {
-  console.log(node);
-  console.log(event.clientX);
 
-  if (showingDetail) {
+  // node == "X" means the x button on the preview
+  if (showingDetail || node == "x") {
     toDel = document.getElementById("details")
     if (toDel != null) {
       toDel.remove()
       showingDetail = false
+      if (node == "x") { console.log ("X btn"); return; }; // x button
     }
+  console.log(node);
+  console.log(event.clientX);
   } else {
     var mapNode = node.parentNode.parentNode;
     var boxDiv = document.createElement("div");
@@ -37,9 +39,17 @@ function createBox (node, name) {
     // set its position
     boxDiv.style.left = OFFSETX + event.clientX+"px";
     boxDiv.style.top = OFFSETY + event.clientY+"px";
+    box.innerHTML = "";
+    box.innerHTML += "<button onclick='createBox(" + "\"x\"" + ", name)'class='previewBtn'>&#10006;</button>";
+    box.innerHTML += "<h4 class='previewCenter'>"+name+"</h4";
+
 
     console.log(boxDiv);
-    box.innerHTML = "<strong>HEYYY!!!!!</strong> <br> <strong> you clicked on " + name + "</strong>";
+    box.innerHTML += "<img width='125px' src="+"'prefectures/thumbnails/"+name+"/"+name+".png'"+
+      " onError=\"this.src=" + "'prefectures/thumbnails/"+name.toLowerCase()+"/"+name+".png'\""+">";
+    //box.innerHTML = "<strong>HEYYY!!!!!</strong> <br> <strong> you clicked on " + name + "</strong>";
+    box.innerHTML += "<br>";
+    box.innerHTML += "<a class='previewCenter'"+" href='"+"prefectures/"+name.toLowerCase()+".html'"+">"+"Read More"+"</a>";
     showingDetail = true; // html is added. therefore if clicked again it should delete it
   }
  }
