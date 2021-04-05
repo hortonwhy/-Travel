@@ -161,23 +161,29 @@ function getList() {
 
 function renderList(arr) {
   table = document.getElementById("animeList");
-  count = 4;
-  for (i=0; i < arr.length / count; i++) {
-    row = document.createElement("tr");
-    for (j = 0; j < count; j++) {
+  count = 0;
+  for (i=0; i < arr.length; i++) {
+    if (count == 0) {
+      row = document.createElement("tr");
+    }
+    count++;
     td = document.createElement("td");
-      link = document.createElement("a");
-      link.setAttribute("href",arr[i+j][1]);
-      link.innerHTML = arr[i+j][0];
-      td.appendChild(link);
-      if (arr[i+j] != null) {
+    link = document.createElement("a");
+    link.setAttribute("href",arr[i][1]);
+    link.innerHTML = arr[i][0];
+    td.appendChild(link);
+      if (arr[i] != null) {
       row.appendChild(td);
       }
-    }
+  console.log(count);
+  if (count > 3) {
     row.appendChild(td);
     table.appendChild(row);
+    count = 0;
   }
   console.log(table);
+  }
+  table.appendChild(row);
 }
 
 
