@@ -49,7 +49,7 @@ svg .niigata:hover path.niigata{
   overflow: auto;
 }
 
-#prefBody {
+#prefBody, #animeList {
   clear: both;
   background-color: #fcd1d7;
   border: 2px solid black;
