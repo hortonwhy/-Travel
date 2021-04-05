@@ -34,7 +34,7 @@
             <div id="map">
               Will contain a list of Prefecture pages that will you take you to a page
               that contains all the animes present in the respective prefecture
-		<table border=2>
+		<table border=2 id="prefTable">
 	    <?php
 
 		exec('ls'.' prefectures', $out);

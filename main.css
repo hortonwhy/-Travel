@@ -109,6 +109,11 @@ svg .niigata:hover path.niigata{
   margin: 1em;
 }
 
+#prefTable {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .caption {
   padding: 0px;
   margin:0 auto;
