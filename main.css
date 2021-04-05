@@ -88,6 +88,12 @@ svg .niigata:hover path.niigata{
   background-color: #e9b1cd;
 }
 
+#details p {
+  padding-top: 0px;
+  margin: 0;
+  border: 1px solid black;
+}
+
 #leftSide {
   float:left;
   width:65%;
@@ -189,4 +195,7 @@ svg .niigata:hover path.niigata{
   margin-left: auto;
   margin-right: auto;
   text-align:center;
+}
+
+.previewBtn {
 }
