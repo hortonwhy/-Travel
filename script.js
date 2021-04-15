@@ -29,10 +29,13 @@ function createBox (node, name) {
   console.log(node);
   console.log(event.clientX);
   } else {
+    var mapTheme = $("#body").attr("class");
     var mapNode = node.parentNode.parentNode;
     var boxDiv = document.createElement("div");
     var box = document.createElement("p");
     boxDiv.setAttribute("id", "details");
+    boxDiv.setAttribute("class", mapTheme);
+    box.setAttribute("class", mapTheme);
     mapNode.appendChild(boxDiv);
     boxDiv.appendChild(box);
 
@@ -49,7 +52,7 @@ function createBox (node, name) {
       " onError=\"this.src=" + "'prefectures/thumbnails/"+name.toLowerCase()+"/"+name+".png'\""+">";
     //box.innerHTML = "<strong>HEYYY!!!!!</strong> <br> <strong> you clicked on " + name + "</strong>";
     box.innerHTML += "<br>";
-    box.innerHTML += "<a class='previewCenter'"+" href='"+"prefectures/"+name.toLowerCase()+".html'"+">"+"Read More"+"</a>";
+    box.innerHTML += "<a class='previewCenter " + mapTheme+"'"+" href='"+"prefectures/"+name.toLowerCase()+".html'"+">"+"Read More"+"</a>";
     showingDetail = true; // html is added. therefore if clicked again it should delete it
   }
  }

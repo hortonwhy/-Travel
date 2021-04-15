@@ -8,7 +8,7 @@
     <meta name="description" content="ENTER DESCRIPTION HEcRE">
     <meta name="author" content="ENTER NAME HERE">
   <link rel="stylesheet" href="main.css">
-  <script src="redirectHome.js"></script>
+  <script src="jquery-3.6.0.min.js"></script>
   <script src="script.js" defer></script>
   <script src="navBar.js" defer></script>
 </head> 
@@ -28,18 +28,66 @@
         </table>
     </div>
 
-    <div id="body">
+<?php
+if (isset($_COOKIE["theme"])){
+	$css = $_COOKIE["theme"];
+} else {
+	$css = "default";
+}
+echo "<div id='body' class='" . $css."'";
+?>
         <div id="description">
             <p>
-            <div id="map">
-              <!--<img class="center" name="japan" src="assets/images/japan.png" onclick="showDetail(this)">-->
-              <!--
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1474.63 1113.76"><defs><style>.cls-1{fill:#b3b3b3;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-8,.cls-9{stroke:#000;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-miterlimit:10;}.cls-2{fill:#ed1c24;}.cls-3{fill:red;}.cls-4{fill:#fbb03b;}.cls-5,.cls-6{fill:#662d91;}.cls-6,.cls-7{stroke:#0c1000;}.cls-7,.cls-8{fill:aqua;}.cls-9{fill:lime;}.cls-10{fill:#ff0;}.cls-11{fill:#ff6d24;} path:hover { opacity: 0.5;} </style></defs><title>Prefectures</title><g id="Okinawa">
-                  -->
-		  <!--
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1474.63 1113.76"><defs><style>.cls-1{fill:#b3b3b3;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-8,.cls-9{stroke:#000;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-miterlimit:10;}.cls-2{fill:#ed1c24;}.cls-3{fill:red;}.cls-4{fill:#fbb03b;}.cls-5,.cls-6{fill:#662d91;}.cls-6,.cls-7{stroke:#0c1000;}.cls-7,.cls-8{fill:aqua;}.cls-9{fill:lime;}.cls-10{fill:#ff0;}.cls-11{fill:#ff6d24;} path:hover { opacity: 0.5;}
+            <!-- <div id="map"> -->
+<?php
+echo "<form method='post'" . "action=" . $_SERVER['PHP_SELF'] . ">";
+if (isset($_COOKIE["theme"])) {
+	$css = $_COOKIE["theme"];
+} else {
+	$css = "default";
+}
+echo "<table id='themeForm'". "class='". $css."'>";
+?>
+	<tr> <td><label>Map Themes</label> </td></tr>
+	<tr> <td><label>Default</label><input type = 'radio' name='theme' value='default'> </td></tr>
+	<tr> <td><label>Black</label><input type = 'radio' name='theme' value='black'> </td></tr>
+	<tr> <td><label>White</label><input type = 'radio' name='theme' value='white'> </td></tr>
+	<tr> <td><label>Reset Cookies</label><input type = 'checkbox' name='cookieClear' value='clear'> </td></tr>
+	<tr> <td><input type ='submit' value='Submit'></td></tr>
+</table>
+</form>
+
+
+
+<?php
+if ($_POST) {
+	if (!isset($_POST['cookieClear'])) {
+	setcookie ("theme", $_POST['theme'], time() + 120, "/");
+	header("Location: ". $_SERVER['PHP_SELF']);
+	echo "Cookie set: " . $_POST['theme'];
+	} else {
+		setcookie ("theme", "", time() - 3600, "/");
+		header("Location: ". $_SERVER['PHP_SELF']);
+	}
+}
+                  $themes = array( "default" => "<svg 
+                    xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1474.63 1113.76'><defs><style>.cls-1{fill:#b3b3b3;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-8,.cls-9{stroke:#000;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-miterlimit:10;}.cls-2{fill:#ed1c24;}.cls-3{fill:red;}.cls-4{fill:#fbb03b;}.cls-5,.cls-6{fill:#662d91;}.cls-6,.cls-7{stroke:#0c1000;}.cls-7,.cls-8{fill:aqua;}.cls-9{fill:lime;}.cls-10{fill:#ff0;}.cls-11{fill:#ff6d24;} path:hover { opacity: 0.5;}",
+
+                    "black" => "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1474.63 1113.76'><defs><style>.cls-1{fill:#191919;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-8,.cls-9{stroke:#fff;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-miterlimit:10;}.cls-2{fill:#191919;}.cls-3{fill:#191919;}.cls-4{fill:#191919;}.cls-5,.cls-6{fill:#191919;}.cls-6,.cls-7{stroke:#0c1000;}.cls-7,.cls-8{fill:#191919;}.cls-9{fill:#191919;}.cls-10{fill:##191919;}.cls-11{fill:##191919;} path:hover { opacity: 0.5;}",
+
+                    "white" => "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1474.63 1113.76'><defs><style>.cls-1{fill:#f2f2f2;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-8,.cls-9{stroke:#000;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke-miterlimit:10;}.cls-2{fill:#f2f2f2;}.cls-3{fill:#f2f2f2;}.cls-4{fill:#f2f2f2;}.cls-5,.cls-6{fill:#f2f2f2;}.cls-6,.cls-7{stroke:#0c1000;}.cls-7,.cls-8{fill:#f2f2f2;}.cls-9{fill:#f2f2f2;}.cls-10{fill:#f2f2f2;}.cls-11{fill:#f2f2f2;} path:hover { opacity: 0.5;}"
+
+	    );
+	if (isset($_COOKIE["theme"])) { 
+            	echo "<div id='map' class=".$_COOKIE['theme'].">";
+		echo $themes[$_COOKIE["theme"]];
+		echo $_COOKIE["theme"];
+	} else {
+		echo $themes["default"];
+	}
+?>
                                                                                                                     </style></defs><title>Prefectures</title>
+
                                                                                                                     <g id="Okinawa">
                                                                                                                       <path 
                                                                                                                         onclick=showDetail("Okinawa")
@@ -109,7 +157,6 @@
                                                                                                                                                                                                                       <path 
                                                                                                                                                                                                                         onclick=showDetail("Hokkaido")
                                                                                                                                                                                                                         class="cls-11" d="M1349.06,93.32s-6.5,1-5,10,5,22.5,5,22.5a25.27,25.27,0,0,0,0,11.5c1.5,6,3.5,17.5,0,20.5s4.22,2.5-1.64,8-3.31,14.5-3.58,14-11.28,9.5-11.28,9.5v28.5s-7,8-11,10.5-14.5,0-14.5,0-11.5,11.5-8,11,6,22,4,27-2.5,13-2.5,13a6.88,6.88,0,0,0-6,0c-3.5,1.5-10,10.5-11.5,12s-6.5,0-6.5,0-7-9.5-11-8.5-17.5-.5-17.5-.5-2-14-13-18.5-14.5-2.5-16.5-1-.5,12,0,15,3.5,12,5.5,11.5.5,7.5.5,7.5l-7,2s-9.49,6-8.49,10-7.5,0-7.5,0-16,4-11,7-19,0-19,0-2.5,20-4,26.5-8,0-8,4.5v10s7,0,8,6.5,9.5,18,13.5,18-24.5,33-21.5,32-.22,10-.22,10,7.22,16.5,12.22,16a13.05,13.05,0,0,0,8-4l16.5-3v-14.5l21-10.5s12.5,16.5,18,17.5,17-3.5,17-3.5l.5-11.5s-7.5-8.5-10.5-7-4.5-27.5-21-26.5-23-21.5-23-21.5,6-15,8-13,11-7.5,11-7.5-.5,4,6,4,11-.5,11-.5,16,27,14.5,31,19.5-14.5,19.5-14.5l32.5-6,18,8.5,7,11.5s16,6.5,21,12,17.5,22.5,23.5,23.5,11,1.5,14.5,5.5,11.5,15,11.5,15,6.5,7,5.5,11,4.5,1,4.5,1v-7l9.5-2s12-41,14.5-38,31-25,31-23.5,41-20,42-11.5,13.5,10.5,13.5,10.5l21.5,1.5v-8l3-1,4,8.5,20.5-5s1-6.5,3.5-6,28.5,2,28.5,2,6.5-5,7.5-10,13.5.5,17-.5,0-9,0-9-12.5-8-18-4.5-6,8.5-12.5,7.5-10-24-10-24,6.5,1.5,10.5,1-15.5-18.5-15.5-18.5l-1-10.5s15-11.5,15.5-18.5,18-18.5,18-18.5,3-3.5,0-7-6-3.5-8,0-14,7-14,11-8.5,0-8.5,0-25.5,12-21,14.5-20-3.49-20-3.49a19.2,19.2,0,0,1-9-8c-3.5-6-5.5-15-7.5-13.5s-3,7.5-5,10-9-1.5-6-2.5,4-6.5,4-6.5-5.5-9.5-8.5-7.5-11,1.5-9,5-12-10-15-7.5,3.5-8-1-10-7-13.5-11.5-13-16-6-15.5-8.5-23-26.5-21.5-29.5-11.5-14.5-10-16-14.5-27-12.5-30.5-13-38-16-38-7.5-1-8.5-3.5-5-13-5-13-7,8-6.5,8-12,2.5-15.5-4-1.5,8.5-1.5,8.5Z" transform="translate(-149.49 -72.87)"/></g></svg>
-		  -->
 
               <p id="test"></p>
             </div>
