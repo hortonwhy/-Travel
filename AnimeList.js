@@ -167,10 +167,17 @@ function renderList(arr) {
       row = document.createElement("tr");
     }
     count++;
+
     td = document.createElement("td");
+    checkBox = document.createElement("input");
+    checkBox.setAttribute('type', 'checkbox');
+    checkBox.setAttribute('name', 'anime[]');
+    checkBox.setAttribute('value', arr[i][0]+" "+arr[i][1]);
+    console.log(checkBox);
     link = document.createElement("a");
     link.setAttribute("href",arr[i][1]);
     link.innerHTML = arr[i][0];
+    td.appendChild(checkBox);
     td.appendChild(link);
       if (arr[i] != null) {
       row.appendChild(td);
@@ -179,11 +186,20 @@ function renderList(arr) {
   if (count > 3) {
     row.appendChild(td);
     table.appendChild(row);
+    submit = document.createElement("input");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("value", "Submit");
+
+
     count = 0;
   }
   console.log(table);
   }
   table.appendChild(row);
+    submit = document.createElement("input");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("value", "Submit");
+    table.appendChild(submit)
 }
 
 
