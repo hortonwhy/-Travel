@@ -72,6 +72,28 @@ function validateMail() {
   if (!name.match(alpha)) {
     alert('Please enter a valid name.')
 }
+
+
   //emailForm = document.getElementById(id);
   //console.log(emailForm)
 }
+
+function saveFile(passForm) {
+  set fso = CreateObject("Scripting.FileSystemObject");
+  set s = fso.CreateTextFile("dokidoki-Travel/Data/emails.txt", true);
+
+
+  var email = document.getElementById('email').innerText;
+
+  s.writeLine(email);
+  s.writeLine("------------------------------------------");
+  s.close();
+
+
+}
+
+
+
+
+
+
