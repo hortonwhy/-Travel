@@ -1,3 +1,9 @@
+<?php
+
+
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -32,33 +38,68 @@
         <div id="description">
             <p>
             <div id="map">
-              <p class="body-text">
-                &emsp;Anime popularity has seen unprecedented growth in the past decade, and it’s reach and influence has expanded similarly so. Because of this, it is important to allow fans to learn about the regions and culture that their favorite show, movie, or song originated from. However, coinciding with this breakthrough, anime faced public negativity. Specifically, the negativity surrounding anime exploded around the same time with the arrest of Tsutomu Miyazaki, the "Otaku Murderer". Despite this, anime's popularity continued to surge. Following this trend, we intend to mitigate the barriers of entry between societies. In doing so, this website will produce opportunities for fans, as well as the general public, to discover more about their favorite anime location.
-              </p>
             <form method="POST">
               <table>               
                 <tr>
                   <th>
-                    Send us a message!
+                    <h2>Feedback Form</h2><br>
+                    Thank you for taking the time to provide us with feedback. We appreciate your opinions and will consider them carefully.
                   </th>
                 </tr>
                 <tr>
                   <td>
-                    <label>Name: </label>
+                    <b>How did you hear about us? </b>
                   </td>
                   <td>
-                    <input id="name" type="text"><br>
+                    <select name="media" id="media">
+                        <option value="null">-</option>
+                        <option value="google">Google</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="email">Email</option>
+                        <option value="friend">Friend</option>
+                        <option value="other">Other</option>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <label>Email: </label>
+                    <b>How often do you watch anime?</b>
                   </td>
                   <td>
-                    <input id="email" type="text"><br>
+                    <label>Every day <input name="watch" type="radio" value="every day" /></label>
+                    <label>2-3 times a week <input name="watch" type="radio" value="2-3" /></label>
+                    <label>Few times a month <input name="watch" type="radio" value="few times" /></label>
+                    <label>Rarely <input name="watch" type="radio" value="rarely" /></label>
+    
                   </td>
                 </tr>
                 <tr>
+                  <td>
+                    <b>How satisfied are you with the website experience?</b>
+                  </td>
+                  <td>
+                    <label>Very Satisfied <input name="rating" type="radio" value="very satisfied" /></label>
+                    <label>Satisfied <input name="rating" type="radio" value="satisfied" /></label>
+                    <label>Neutral <input name="rating" type="radio" value="neutral" /></label>
+                    <label>Unsatisfied <input name="rating" type="radio" value="unsatisfied" /></label>
+                    <label>Very Unsatisfied <input name="rating" type="radio" value="very unsatisfied" /><br></label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>How likely are you to recommend our website to others?</b>
+                  </td>
+                  <td>
+                    <label>Very Likely <input name="rec" type="radio" value="very likely" /></label>
+                    <label>Likely <input name="rec" type="radio" value="likely" /></label>
+                    <label>Neutral <input name="rec" type="radio" value="neutral" /></label>
+                    <label>Unlikely <input name="rec" type="radio" value="unlikely" /></label>
+                    <label>Not at all likely <input name="rec" type="radio" value="not at all likely" /><br></label>
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>What can we do to improve?</b>
+                    </td>
                   <td colspan="2">
                     <textarea name="comments" rows="5" cols="36">Your Message:</textarea><br>
                   </td>
