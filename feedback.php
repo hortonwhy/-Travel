@@ -52,7 +52,7 @@
                 <tr>
                   <th>
                     <h2>Feedback Form</h2><br>
-                    Thank you for taking the time to provide us with feedback. We appreciate your opinions and will consider them carefully.
+                    <p class="feedback_head">Thank you for taking the time to provide us with feedback. We appreciate your opinions and will consider them carefully.</p>
                   </th>
                 </tr>
                 <tr>
@@ -116,8 +116,8 @@
                 <tr>
                   <td>
                   <!--<input type="submit" value ="Submit" onclick="validateMail()">-->
-                    <input type="button" onclick="validateMail()" value="Submit" />
-                    <input type="reset" value="Clear"/>
+                    <button type="submit" value="Register">Register</button>
+                    <button type="reset" value="Reset">Reset</button>
                   </td>
                 </tr>
               </table>
