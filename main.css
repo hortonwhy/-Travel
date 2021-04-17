@@ -231,3 +231,10 @@ h4.black {
 .feedback_head{
   text-align: center;
 }
+.feedback_table{
+  margin:auto;
+}
+.feedback_items{
+  padding:1%;
+  margin:auto;
+}

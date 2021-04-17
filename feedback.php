@@ -48,9 +48,9 @@
             <p>
             <div id="map">
             <form method="POST">
-              <table>               
+              <table class="feedback_table">               
                 <tr>
-                  <th>
+                  <th colspan="2">
                     <h2>Feedback Form</h2><br>
                     <p class="feedback_head">Thank you for taking the time to provide us with feedback. We appreciate your opinions and will consider them carefully.</p>
                   </th>
@@ -59,7 +59,7 @@
                   <td>
                     <b>How did you hear about us? </b>
                   </td>
-                  <td>
+                  <td class="feedback_items">
                     <select name="media" id="media" required>
                         <option value="null">-</option>
                         <option value="google">Google</option>
@@ -73,7 +73,7 @@
                   <td>
                     <b>How often do you watch anime?</b>
                   </td>
-                  <td>
+                  <td class="feedback_items">
                     <label>Every day <input name="watch" type="radio" value="every day" required/></label>
                     <label>2-3 times a week <input name="watch" type="radio" value="2-3" /></label>
                     <label>Few times a month <input name="watch" type="radio" value="few times" /></label>
@@ -85,7 +85,7 @@
                   <td>
                     <b>How satisfied are you with the website experience?</b>
                   </td>
-                  <td>
+                  <td class="feedback_items">
                     <label>Very Satisfied <input name="rating" type="radio" value="very satisfied" required/></label>
                     <label>Satisfied <input name="rating" type="radio" value="satisfied" /></label>
                     <label>Neutral <input name="rating" type="radio" value="neutral" /></label>
@@ -97,7 +97,7 @@
                   <td>
                     <b>How likely are you to recommend our website to others?</b>
                   </td>
-                  <td>
+                  <td class="feedback_items">
                     <label>Very Likely <input name="rec" type="radio" value="very likely" required/></label>
                     <label>Likely <input name="rec" type="radio" value="likely" /></label>
                     <label>Neutral <input name="rec" type="radio" value="neutral" /></label>
@@ -109,7 +109,7 @@
                     <td>
                         <b>What can we do to improve?</b>
                     </td>
-                  <td colspan="2">
+                  <td colspan="2" class="feedback_items">
                     <textarea name="comments" rows="5" cols="36">Your Message:</textarea><br>
                   </td>
                 </tr>
