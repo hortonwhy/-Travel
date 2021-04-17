@@ -62,7 +62,7 @@ echo "<table id='themeForm'". "class='". $css."'>";
 <?php
 if ($_POST) {
 	if (!isset($_POST['cookieClear'])) {
-	setcookie ("theme", $_POST['theme'], time() + 120, "/");
+	setcookie ("theme", $_POST['theme'], time() + 12000, "/");
 	header("Location: ". $_SERVER['PHP_SELF']);
 	echo "Cookie set: " . $_POST['theme'];
 	} else {

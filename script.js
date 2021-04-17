@@ -78,6 +78,7 @@ function validateMail() {
   //console.log(emailForm)
 }
 
+/*
 function saveFile(passForm) {
   set fso = CreateObject("Scripting.FileSystemObject");
   set s = fso.CreateTextFile("dokidoki-Travel/Data/emails.txt", true);
@@ -91,6 +92,8 @@ function saveFile(passForm) {
 
 
 }
+*/
+
 
 
 
