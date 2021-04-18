@@ -37,10 +37,9 @@ if (isset($_COOKIE["theme"])){
 echo "<div id='body' class='" . $css."'";
 ?>
         <div id="description">
-            <p>
             <!-- <div id="map"> -->
 <?php
-echo "<form method='post'" . "action=" . $_SERVER['PHP_SELF'] . ">";
+echo "<form method='post' id='chooseTheme'" . "action=" . $_SERVER['PHP_SELF'] . ">";
 if (isset($_COOKIE["theme"])) {
 	$css = $_COOKIE["theme"];
 } else {

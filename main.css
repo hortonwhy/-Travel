@@ -3,7 +3,11 @@ body {
   font-family: Arial;
 }
 svg {
+      display: block;
       user-select: none;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
 }
 
 svg .hyogo:hover path.hyogo{
@@ -12,6 +16,12 @@ svg .hyogo:hover path.hyogo{
 
 svg .niigata:hover path.niigata{
   opacity: 0.5;
+}
+
+#chooseTheme table { 
+  position: absolute;
+  border: 2px solid black;
+
 }
 
 #navBar table{
@@ -73,7 +83,8 @@ svg .niigata:hover path.niigata{
 #map {
   width: 85%;
   margin: 10px auto;
-  height: 80vh;
+  /*height: 80vh;*/
+  height: 60%;
 }
 
 #description {
