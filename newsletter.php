@@ -5,8 +5,9 @@
     
         if($file = fopen('Data/emails.txt', 'a')) {
             fwrite($file, $email . ":" . "\n");
-            echo '<script>alert("Email Sent!")</script>';
+            echo '<script>alert("You have successfully signed up for the newsletter!")</script>';
         };
+
         
         fclose($file);
 
@@ -61,7 +62,7 @@
                             <b>Please enter your email:</b>
                         </td>
                           <td colspan="2" class="newsletter_email">
-                            <input type="text" name="email" rows="5" cols="36"><br>
+                            <input type="email" name="email" rows="5" cols="36"><br>
                           </td>
                     </tr>
                     <tr>
