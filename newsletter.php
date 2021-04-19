@@ -3,10 +3,15 @@
 
         $email = $_POST['email'];
     
-        $file = fopen('Data/emails.txt', 'a');
-        fwrite($file, $email . ":" . "\n");
+        if($file = fopen('Data/emails.txt', 'a')) {
+            fwrite($file, $email . ":" . "\n");
+            echo <script>alert("Email Sent!")</script>;
+        };
+        
         fclose($file);
+
     }
+
 ?>
 
 
