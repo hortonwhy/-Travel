@@ -53,10 +53,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <b>Please enter your email</b>
+                            <b>Please enter your email:</b>
                         </td>
                           <td colspan="2" class="newsletter_email">
-                            <textarea name="email" rows="5" cols="36">Email: </textarea><br>
+                            <input type="text" name="email" rows="5" cols="36"><br>
                           </td>
                     </tr>
                     <tr>
