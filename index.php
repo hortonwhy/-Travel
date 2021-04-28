@@ -15,6 +15,7 @@
 
 <body>
 
+<<<<<<< HEAD
   <a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
   <div id="navBar">
     <table>
@@ -68,6 +69,20 @@
     </table>
     </form>
 
+=======
+<a href="index.php"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
+    <div id="navBar">
+        <table>
+            <tr>
+                <th><a href="index.php">ドキドキ Travel</a></th>
+                <th><a href="anime.php">Anime</a></th>
+                <th><a href="prefectures.php">Prefectures</a></th>
+                <th><a href="aboutUs.html">About Us</a></th>
+                <th><a href="contactUs.html">Contact Us</a></th>
+            </tr>
+        </table>
+    </div>
+>>>>>>> 142e21c349a0df4cd348abfae11bf429c3f73343
 
 
     <?php
