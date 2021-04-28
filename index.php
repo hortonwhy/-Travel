@@ -15,13 +15,13 @@
 
 <body>
 
-<a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
+<a href="index.php"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
     <div id="navBar">
         <table>
             <tr>
-                <th><a href="index.html">ドキドキ Travel</a></th>
-                <th><a href="anime.html">Anime</a></th>
-                <th><a href="prefectures.html">Prefectures</a></th>
+                <th><a href="index.php">ドキドキ Travel</a></th>
+                <th><a href="anime.php">Anime</a></th>
+                <th><a href="prefectures.php">Prefectures</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
             </tr>
