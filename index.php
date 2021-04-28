@@ -247,6 +247,40 @@
     </g></svg>
 
     <p id="test"></p>
+    <script language="javascript" type="text/javascript">
+	function ajaxFunction(change) {
+		var ajaxRequest;
+
+		ajaxRequest = new XMLHttpRequest();
+		ajaxRequest.onreadystatechange = function() {
+			if (ajaxRequest.readyState == 4) {
+				var ajaxDisplay = document.getElementById('blogs');
+				var counterValue = document.getElementById("counter");
+				var initialValue = counterValue.value;
+				counter = initialValue;
+			//	counter = parseInt(initialValue) + change;
+			//	counterValue.setAttribute("value", counter);
+				console.log(counter);
+				ajaxDisplay.innerHTML = ajaxRequest.responseText;
+			}
+		}
+
+		if (counter.value != undefined) {
+			counter = counter.value;
+		}
+
+		if (change > 0 ) { 
+			direction = true;
+		} else {
+			direction = false;
+		}
+
+		var queryString = "?counter=" + counter + "&change="+ direction;
+		ajaxRequest.open("GET", "ajax.php" + queryString, true);
+		ajaxRequest.send(null);
+	}
+    </script>
+
     <div id="blogs">
       <p>
         <?php
@@ -262,13 +296,20 @@
           $mysqli->select_db($dbName) or die($mysqli->error);
           $counter = 0;
           $blogposts = $mysqli->query("SELECT * FROM blogs"); 
-          while(($row = $blogposts->fetch_array(MYSQLI_ASSOC)) && $counter < 3){
+          while(($row = $blogposts->fetch_array(MYSQLI_ASSOC)) && $counter <=2){
             echo("<h4>'$row[title]'</h4><h5>Author:'$row[author]'</h5><p>'$row[body]'</p>");
+	    echo "$counter";
             $counter++;
           }
-          echo "<input type=\"button\" value=\"Read More\" onclick='ajaxFunction($counter)'>";
+	  echo "<input id='counter' type='text' hidden value = '$counter'>"; // NEEDED
+
+          echo "<input type=\"button\" value=\"Previous Page\" onclick='ajaxFunction(-3)'>";
+          echo "<input type=\"button\" value=\"Next Page\" onclick='ajaxFunction(3)'>";
           
         ?>
+      </p>
+
+      <p id="ajaxDiv">
       </p>
     </div>
   </div>
