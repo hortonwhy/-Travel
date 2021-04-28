@@ -15,14 +15,13 @@
 
 <body>
 
-<<<<<<< HEAD
-  <a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
+  <a href="index.php"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
   <div id="navBar">
     <table>
       <tr>
-        <th><a href="index.html">ドキドキ Travel</a></th>
-        <th><a href="anime.html">Anime</a></th>
-        <th><a href="prefectures.html">Prefectures</a></th>
+        <th><a href="index.php">ドキドキ Travel</a></th>
+        <th><a href="anime.php">Anime</a></th>
+        <th><a href="prefectures.php">Prefectures</a></th>
         <th><a href="aboutUs.html">About Us</a></th>
         <th><a href="contactUs.html">Contact Us</a></th>
       </tr>
@@ -69,20 +68,6 @@
     </table>
     </form>
 
-=======
-<a href="index.php"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
-    <div id="navBar">
-        <table>
-            <tr>
-                <th><a href="index.php">ドキドキ Travel</a></th>
-                <th><a href="anime.php">Anime</a></th>
-                <th><a href="prefectures.php">Prefectures</a></th>
-                <th><a href="aboutUs.html">About Us</a></th>
-                <th><a href="contactUs.html">Contact Us</a></th>
-            </tr>
-        </table>
-    </div>
->>>>>>> 142e21c349a0df4cd348abfae11bf429c3f73343
 
 
     <?php
@@ -265,6 +250,10 @@
     <div id="blogs">
       <p>
         <?php
+          error_reporting(E_ALL);
+          ini_set("display_errors", "on");
+
+
           $server = "spring-2021.cs.utexas.edu";
           $user = "cs329e_bulko_cchen99";
           $pwd = "Fire_almond_jazz";
@@ -274,13 +263,10 @@
           $counter = 0;
           $blogposts = $mysqli->query("SELECT * FROM blogs"); 
           while(($row = $blogposts->fetch_array(MYSQLI_ASSOC)) && $counter < 3){
-            echo("<h4>'$row[title]'</h4>
-                  <h5>Author:'$row[author]'</h5>                
-                  <p>'$row[body]'</p>");
-                  
+            echo("<h4>'$row[title]'</h4><h5>Author:'$row[author]'</h5><p>'$row[body]'</p>");
             $counter++;
           }
-          echo "<input type=\"button\" value=\"Read More\" onclick='ajaxFunction($counter)'>"
+          echo "<input type=\"button\" value=\"Read More\" onclick='ajaxFunction($counter)'>";
           
         ?>
       </p>
@@ -288,8 +274,10 @@
   </div>
   <!-- Content -->
   </p>
-
-
+  <p>
+    <!-- Content -->
+  </p>
+  </div>
 
   </div>
   <div id="footer">
