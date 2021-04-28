@@ -1,13 +1,223 @@
 <?php
 session_start();
+$loggedIn = true;
+if (!isset($_SESSION["loggedIn"])) {
+	$loggedIn = false;
+	$registering = false;
+	if ($_POST["usernameReg"]) {
+		if (registerUser($_POST["usernameReg"], $_POST["password"])) {
+			$_SESSION["loggedIn"] = $_POST["usernameReg"];
+			Header("Location: ./anime.php");
+		} else {
+			$registering = true;
+			printRegister();
+			
+		}
+	}
+	if ($_POST["register"]) { 
+		$registering = true;
+		printRegister();
+	}
+	if ($_POST["username"]) {
+		$username = $_POST["username"];
+		$password = $_POST["password"];
+		if (verifyLogin($username, $password)) {
+			$_SESSION["loggedIn"] = $username;
+			Header("Location: ./anime.php");
+		}
+	}
+	if (!$registering) {
+	print <<<LOGIN
+<html>
+<head>
+  <title>Dokidoki Travel</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js" defer></script>
+  <script src="AnimeList.js" defer></script>
+</head> 
+<body>
+<a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
+    <div id="navBar">
+        <table>
+            <tr>
+                <th><a href="index.html">ドキドキ Travel</a></th>
+                <th><a href="anime.html">Anime</a></th>
+                <th><a href="prefectures.html">Prefectures</a></th>
+                <th><a href="aboutUs.html">About Us</a></th>
+                <th><a href="contactUs.html">Contact Us</a></th>
+            </tr>
+        </table>
+    </div>
 
-if ($_POST["page"] == "confirm") {
+    <div id="body">
+        <div id="description">
+            <p>
+            <div id="map">
+              <form method='post' action="./anime.php">
+		<label>Username: <input type="text" name="username"></label> <br>
+		<label>Password: <input type="password" name="password"></label> <br>
+
+		<input type="submit" value="Login">
+		<input type="reset" value="Reset">
+              </form>
+		<form method='post' action="./anime.php">
+		<input type="submit" name = "register" value = "Register">
+		</form>
+              <br><br><br><br><br>
+              <br><br><br><br><br>
+            </div>
+                <!-- Content -->
+            </p>
+            <p>
+                <!-- Content -->
+            </p>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <p>Copyright © 3/09/2021  Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
+    </div>
+</body>
+
+</html>
+LOGIN;
+	}
+} 
+
+function verifyLogin ($u, $p) {
+	echo $u . $p;
+	$server = "spring-2021.cs.utexas.edu";
+	$usr = "cs329e_bulko_cchen99";
+	$dbName = "cs329e_bulko_cchen99";
+	$pwd = "Fire_almond_jazz";
+	$mysqli = new mysqli($server, $usr, $pwd, $dbName);
+	if ($mysqli->connect_errno) {
+		die ("Connect Error: ". $mysqli->connect_errno . ": ". $mysqli->connect_error);
+	} else {
+
+	}
+	$query = "SELECT * FROM accounts WHERE username='$u' AND password='$p'";
+	$mysqli->select_db($dbName) or die($mysqli->error);
+
+	// prevent mysql injection
+	$u = $mysqli->real_escape_string($u);
+	$p = $mysqli->real_escape_string($p);
+
+	$result = $mysqli->query($query) or die ($mysqli->error);
+
+	$unique = true;
+	$row = $result->fetch_row();
+	if ((count($row)) > 0) { 
+		echo "User Login Successful";
+		return true;
+	}
+	echo "Login Failed";
+	return false;
+	
+}
+
+function registerUser($u, $p) {
+	echo $u . $p;
+	$server = "spring-2021.cs.utexas.edu";
+	$usr = "cs329e_bulko_cchen99";
+	$dbName = "cs329e_bulko_cchen99";
+	$pwd = "Fire_almond_jazz";
+	$mysqli = new mysqli($server, $usr, $pwd, $dbName);
+	if ($mysqli->connect_errno) {
+		die ("Connect Error: ". $mysqli->connect_errno . ": ". $mysqli->connect_error);
+	} else {
+
+	}
+	$query = "SELECT * FROM accounts WHERE username='$u'";
+	$mysqli->select_db($dbName) or die($mysqli->error);
+
+	// prevent mysql injection
+	$u = $mysqli->real_escape_string($u);
+	$p = $mysqli->real_escape_string($p);
+
+	$result = $mysqli->query($query) or die ($mysqli->error);
+
+	$unique = true;
+	$row = $result->fetch_row();
+	if ((count($row)) < 1) { 
+		$insertQuery = "INSERT into accounts VALUES ('$u', '$p')";
+		$result = $mysqli->query($insertQuery) or die ($mysqli->error);
+		echo "User Registered";
+		return true;
+	}
+	return false;
+	
+
+}
+
+function printRegister() {
+		print <<<REGISTER
+<html>
+<head>
+  <title>Dokidoki Travel</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js" defer></script>
+  <script src="AnimeList.js" defer></script>
+</head> 
+<body>
+<a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
+    <div id="navBar">
+        <table>
+            <tr>
+                <th><a href="index.html">ドキドキ Travel</a></th>
+                <th><a href="anime.html">Anime</a></th>
+                <th><a href="prefectures.html">Prefectures</a></th>
+                <th><a href="aboutUs.html">About Us</a></th>
+                <th><a href="contactUs.html">Contact Us</a></th>
+            </tr>
+        </table>
+    </div>
+
+    <div id="body">
+        <div id="description">
+            <p>
+            <div id="map">
+		<h4> Register </h4>
+              <form method='post' action="./anime.php">
+		<label>Username: <input type="text" name="usernameReg"></label> <br>
+		<label>Password: <input type="password" name="password"></label> <br>
+
+		<input type="submit" value="Register">
+		<input type="reset" value="Reset">
+              </form>
+		<form method='post' action="./anime.php">
+		</form>
+              <br><br><br><br><br>
+              <br><br><br><br><br>
+            </div>
+                <!-- Content -->
+            </p>
+            <p>
+                <!-- Content -->
+            </p>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <p>Copyright © 3/09/2021  Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
+    </div>
+</body>
+
+</html>
+REGISTER;
+}
+
+if ($_POST["page"] == "confirm" && $loggedIn ) {
 	confirmPage();
-} elseif ($_POST["page"] == "confirmed") {
+} elseif ($_POST["page"] == "confirmed" && $loggedIn) {
 	lastPage();
 }	
 else {
+	if ($loggedIn) {
 	chooseAnime();
+	}
 }
 
 function chooseAnime() {
@@ -29,6 +239,7 @@ print <<<PAGE1
                 <th><a href="prefectures.html">Prefectures</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
+		<th><a href="logout.php">Logout</a></th>
             </tr>
         </table>
     </div>
@@ -88,6 +299,7 @@ print <<<PAGE2
                 <th><a href="prefectures.html">Prefectures</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
+		<th><a href="logout.php">Logout</a></th>
             </tr>
         </table>
     </div>
@@ -160,6 +372,7 @@ print <<<PAGE2
                 <th><a href="prefectures.html">Prefectures</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
+		<th><a href="logout.php">Logout</a></th>
             </tr>
         </table>
     </div>
