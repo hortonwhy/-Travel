@@ -250,17 +250,16 @@
     <script language="javascript" type="text/javascript">
 	function ajaxFunction(change) {
 		var ajaxRequest;
+		var counterValue = document.getElementById("counter");
+		var initialValue = counterValue.value;
+		counter = initialValue;
 
 		ajaxRequest = new XMLHttpRequest();
 		ajaxRequest.onreadystatechange = function() {
-			if (ajaxRequest.readyState == 4) {
 				var ajaxDisplay = document.getElementById('blogs');
-				var counterValue = document.getElementById("counter");
-				var initialValue = counterValue.value;
-				counter = initialValue;
-			//	counter = parseInt(initialValue) + change;
-			//	counterValue.setAttribute("value", counter);
-				console.log(counter);
+				//var counterValue = document.getElementById("counter");
+	//			console.log("earlier: " + counter);
+			if (ajaxRequest.readyState == 4) {
 				ajaxDisplay.innerHTML = ajaxRequest.responseText;
 			}
 		}
@@ -271,11 +270,15 @@
 
 		if (change > 0 ) { 
 			direction = true;
+			counter = parseInt(counter) +3;
 		} else {
 			direction = false;
+			counter = parseInt(counter) - 3;
 		}
 
+	//	console.log("last: " + counter);
 		var queryString = "?counter=" + counter + "&change="+ direction;
+	//	console.log(queryString);
 		ajaxRequest.open("GET", "ajax.php" + queryString, true);
 		ajaxRequest.send(null);
 	}
@@ -295,12 +298,13 @@
           $mysqli = new mysqli($server,$user,$pwd,$dbName);
           $mysqli->select_db($dbName) or die($mysqli->error);
           $counter = 0;
-          $blogposts = $mysqli->query("SELECT * FROM blogs"); 
+          $blogposts = $mysqli->query("SELECT * FROM blogs ORDER BY id DESC"); 
           while(($row = $blogposts->fetch_array(MYSQLI_ASSOC)) && $counter <=2){
-            echo("<h4>'$row[title]'</h4><h5>Author:'$row[author]'</h5><p>'$row[body]'</p>");
-	    echo "$counter";
+            echo("<h4>$row[title]</h4><h5>Author:$row[author]</h5><p>$row[body]</p>");
+	    //echo "$counter";
             $counter++;
           }
+	  $counter--; //idx = 2
 	  echo "<input id='counter' type='text' hidden value = '$counter'>"; // NEEDED
 
           echo "<input type=\"button\" value=\"Previous Page\" onclick='ajaxFunction(-3)'>";

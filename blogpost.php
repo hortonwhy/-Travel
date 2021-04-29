@@ -16,7 +16,7 @@ if (count($_POST) != 0) {
     $author = $mysqli->real_escape_string($author);
 	$title = $mysqli->real_escape_string($title);
     $body = $mysqli->real_escape_string($body);
-    $mysqli->query("INSERT INTO blogs VALUES (\"$author\", \"$title\", \"$body\")");   
+    $mysqli->query("INSERT INTO blogs (title, author, body) VALUES (\"$title\", \"$author\", \"$body\")");   
     
 }
 ?>
