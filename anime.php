@@ -258,7 +258,6 @@ print <<<PAGE1
             <p>
             <div id="map">
               <h3 class="align-center">Anime Index: Select what anime you have seen, and we'll compile it into a list for you!</h3>
-              <form action="blogpost.php"><input type="submit" value="Blog Post"/></form>
               <form method='post' action="./anime.php">
               <table id="animeList" border=2>
 	      </table>

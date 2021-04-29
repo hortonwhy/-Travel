@@ -47,8 +47,10 @@ if (count($_POST) != 0) {
                 <th><a href="index.html">ドキドキ Travel</a></th>
                 <th><a href="anime.html">Anime</a></th>
                 <th><a href="prefectures.html">Prefectures</a></th>
+		<th><a href="blogpost.php">Blog</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
+		<th><a href="logout.php">Logout</a></th>
             </tr>
         </table>
     </div>
