@@ -22,6 +22,7 @@
         <th><a href="index.php">ドキドキ Travel</a></th>
         <th><a href="anime.php">Anime</a></th>
         <th><a href="prefectures.php">Prefectures</a></th>
+	<th><a href="blogpost.php">Blog</a></th>
         <th><a href="aboutUs.html">About Us</a></th>
         <th><a href="contactUs.html">Contact Us</a></th>
       </tr>

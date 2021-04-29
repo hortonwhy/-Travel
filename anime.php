@@ -23,6 +23,12 @@ if (!isset($_SESSION["loggedIn"])) {
 		$password = $_POST["password"];
 		if (verifyLogin($username, $password)) {
 			$_SESSION["loggedIn"] = $username;
+			if ($_COOKIE["prevPage"]) {
+				$loc = $_COOKIE["prevPage"];
+				setcookie("prevPage", "", time() - 100, "/");
+				Header("Location: ".$loc);
+				return;
+			}
 			Header("Location: ./anime.php");
 		}
 	}
@@ -43,6 +49,7 @@ if (!isset($_SESSION["loggedIn"])) {
                 <th><a href="index.html">ドキドキ Travel</a></th>
                 <th><a href="anime.html">Anime</a></th>
                 <th><a href="prefectures.html">Prefectures</a></th>
+		<th><a href="blogpost.php">Blog</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
             </tr>
@@ -168,6 +175,7 @@ function printRegister() {
                 <th><a href="index.html">ドキドキ Travel</a></th>
                 <th><a href="anime.html">Anime</a></th>
                 <th><a href="prefectures.html">Prefectures</a></th>
+		<th><a href="blogpost.php">Blog</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
             </tr>
@@ -237,6 +245,7 @@ print <<<PAGE1
                 <th><a href="index.html">ドキドキ Travel</a></th>
                 <th><a href="anime.html">Anime</a></th>
                 <th><a href="prefectures.html">Prefectures</a></th>
+		<th><a href="blogpost.php">Blog</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
 		<th><a href="logout.php">Logout</a></th>
@@ -298,6 +307,7 @@ print <<<PAGE2
                 <th><a href="index.html">ドキドキ Travel</a></th>
                 <th><a href="anime.html">Anime</a></th>
                 <th><a href="prefectures.html">Prefectures</a></th>
+		<th><a href="blogpost.php">Blog</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
 		<th><a href="logout.php">Logout</a></th>
@@ -371,6 +381,7 @@ print <<<PAGE2
                 <th><a href="index.html">ドキドキ Travel</a></th>
                 <th><a href="anime.html">Anime</a></th>
                 <th><a href="prefectures.html">Prefectures</a></th>
+		<th><a href="blogpost.php">Blog</a></th>
                 <th><a href="aboutUs.html">About Us</a></th>
                 <th><a href="contactUs.html">Contact Us</a></th>
 		<th><a href="logout.php">Logout</a></th>

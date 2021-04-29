@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION["loggedIn"])) { 
+	setcookie("prevPage", "./blogpost.php", time() + 1500, "/");
+	Header("Location: ./anime.php");
+}
+
 if (count($_POST) != 0) {
     $posted = true;
     $author = $_SESSION['loggedIn'];
