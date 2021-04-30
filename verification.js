@@ -1,5 +1,9 @@
-function emailValidate() {
-
+function isEmail() {
+	var email = document.getElementById("email").value;
+	var alphanum = /^[0-9a-zA-Z@]+$/;
+	if (!email.match(alphanum)){
+		return false;
+	}
 }
 
 function check(value) {

@@ -64,7 +64,7 @@
                             <b>Please enter your email:</b>
                         </td>
                           <td colspan="2" class="newsletter_email">
-                            <input type="email" name="email" rows="5" cols="36"><br>
+                            <input type="email" name="email" rows="5" cols="36" id="email"><br>
                           </td>
                     </tr>
                     <tr>
