@@ -5,6 +5,8 @@ if (!isset($_SESSION["loggedIn"])) {
 	Header("Location: ./anime.php");
 }
 
+$author = $_SESSION['loggedIn'];
+
 if (count($_POST) != 0) {
     $posted = true;
     $author = $_SESSION['loggedIn'];
@@ -55,39 +57,38 @@ if (count($_POST) != 0) {
         </table>
     </div>
         <form action="blogpost.php" method="POST">
-            <table>
-                <th>
-                    <h3>Create Your Post</h3>
+            <table id="blogTable" class="default">
+                <th colspan="2">
+                    <h3>Create Your Post Below!</h3>
                 </th>
                 <tr>
-                    <td>
-                        Posting as: <strong><?php echo($author) ?></strong>
-                    </td>
+                    <td class="blogLabels" class="blogInputs">
+                        Posting as:
+		    </td>
+		    <td id="bloggerName">
+			<strong><?php echo($author) ?></strong>
+	 	    </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="blogLabels" class="blogInputs">
                         Title
                     </td>
-                    <td>
-                        <input type="text" id="title" name="title">
+                    <td id="blogTitleLabel" class="blogInputs">
+                        <input type="text" id="blogTitle" name="title"required>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Body
+                    <td class="blogLabels" class="blogInputs">
+                        Message
                     </td>
-                    <td>
-                        <textarea id="body" name="body" rows="4" cols="50" maxlength="200"></textarea>
+                    <td class="blogInputs">
+                        <textarea id="body" name="body" rows="7" cols="50" maxlength="200" required></textarea>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                    </td>
-                    <td>
-                        <button type="submit" value="Submit">Submit</button>
-                    </td>
-                    <td>
-                        <button type="clear" value="Reset">Reset</button>
+                    <td colspan="2" class="blogInputs">
+			<button class="blogSubmit" type="clear" value="Reset">Clear Text</button>
+                        <button class="blogSubmit" type="submit" value="Submit">Submit Post</button>
                     </td>
                 </tr>
                 <tr>

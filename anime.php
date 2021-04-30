@@ -59,11 +59,15 @@ if (!isset($_SESSION["loggedIn"])) {
         </table>
     </div>
 
+<<<<<<< Updated upstream
 
 
 
 
     <div id="body">
+=======
+    <div id="body" class="default">
+>>>>>>> Stashed changes
         <div id="description">
             <p>
             <div id="map">
@@ -226,7 +230,7 @@ function printRegister() {
         </table>
     </div>
 
-    <div id="body">
+    <div id="body" class="default">
         <div id="description">
             <p>
             <div id="map">
@@ -298,7 +302,7 @@ print <<<PAGE1
         </table>
     </div>
 
-    <div id="body">
+    <div id="body" class="default">
         <div id="description">
             <p>
             <div id="map">
@@ -359,7 +363,7 @@ print <<<PAGE2
         </table>
     </div>
 
-    <div id="body">
+    <div id="body" class="default">
         <div id="description">
             <p>
             <div id="map">
@@ -433,7 +437,7 @@ print <<<PAGE2
         </table>
     </div>
 
-    <div id="body">
+    <div id="body" class="default">
         <div id="description">
             <p>
             <div id="map">
