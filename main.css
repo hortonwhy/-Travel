@@ -88,11 +88,6 @@ svg .niigata:hover path.niigata{
   height: 60%;
 }
 
-#form {
-  text-align: center;
-
-}
-
 #description {
 
 }
@@ -254,4 +249,8 @@ h4.black {
 .feedback_items{
   padding:1%;
   margin:auto;
+}
+
+.Username{
+  text-align: center;
 }
