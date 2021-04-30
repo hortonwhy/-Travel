@@ -88,8 +88,8 @@ if (!isset($_SESSION["loggedIn"])) {
             
         <tr>
           <td>
-		<input type="submit" value="Login">
-		<input type="reset" value="Reset">
+		<input type="submit" value="Login" class = "previewCenter">
+		<input type="reset" value="Reset" class = "previewCenter">
 
            
             </p>
