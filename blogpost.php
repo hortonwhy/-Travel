@@ -74,7 +74,7 @@ if (count($_POST) != 0) {
                         Title
                     </td>
                     <td id="blogTitleLabel" class="blogInputs">
-                        <input type="text" id="blogTitle" name="title">
+                        <input type="text" id="blogTitle" name="title"required>
                     </td>
                 </tr>
                 <tr>
@@ -82,7 +82,7 @@ if (count($_POST) != 0) {
                         Body
                     </td>
                     <td class="blogInputs">
-                        <textarea id="body" name="body" rows="7" cols="50" maxlength="200"></textarea>
+                        <textarea id="body" name="body" rows="7" cols="50" maxlength="200" required></textarea>
                     </td>
                 </tr>
                 <tr>
