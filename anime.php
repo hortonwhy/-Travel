@@ -68,6 +68,11 @@ if (!isset($_SESSION["loggedIn"])) {
     <table border = "0" style = "width:50%" class = "previewCenter">
         <tr>
           <td>
+            <h3>Please Login or Register to Create an Account</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
             <form method='post' action="./anime.php">
             <p>
             
@@ -77,7 +82,7 @@ if (!isset($_SESSION["loggedIn"])) {
             
         <tr>
           <td> 
-		<label>Password: <input type="password" name="password"></label> <br>
+		<label>Password: <input type="password" name="password"></label> <br><br><br>
           </td>
         </tr>
             
