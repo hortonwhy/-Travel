@@ -89,7 +89,7 @@ if (!isset($_SESSION["loggedIn"])) {
         <tr>
           <td>
 		<input type="submit" value="Login">
-		<input type="reset" value="Reset">
+		<input type="reset" value="Reset"><br>
 
            
             </p>
