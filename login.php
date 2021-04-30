@@ -2,14 +2,12 @@
 session_start();
 $loggedIn = true;
 if (!isset($_SESSION["loggedIn"])) {
-	setcookie("prevPage", "anime.php", time() + 150, "/");
-	Header("Location: login.php");
 	$loggedIn = false;
 	$registering = false;
 	if ($_POST["usernameReg"]) {
 		if (registerUser($_POST["usernameReg"], $_POST["password"])) {
 			$_SESSION["loggedIn"] = $_POST["usernameReg"];
-			Header("Location: ./anime.php");
+//			Header("Location: ./anime.php");
 		} else {
 			$registering = true;
 			printRegister();
@@ -31,7 +29,7 @@ if (!isset($_SESSION["loggedIn"])) {
 				Header("Location: ".$loc);
 				return;
 			}
-			Header("Location: ./anime.php");
+//			Header("Location: ./anime.php");
 		}
 	}
 	if (!$registering) {
@@ -75,7 +73,7 @@ if (!isset($_SESSION["loggedIn"])) {
         </tr>
         <tr>
           <td>
-            <form method='post' action="./anime.php">
+            <form method='post' action="./login.php">
             <p>
             
 		<label>Username: <input type="text" name="username"></label> <br>
@@ -102,7 +100,7 @@ if (!isset($_SESSION["loggedIn"])) {
 
         <tr>
           <td>
-		<form method='post' action="./anime.php">
+		<form method='post' action="./login.php">
             <p>
            
 		<br><input type="submit" name = "register" value = "Register" class = "previewCenter">
@@ -231,14 +229,14 @@ function printRegister() {
             <p>
             <div id="map">
 		<h4> Register </h4>
-              <form method='post' action="./anime.php">
+              <form method='post' action="./login.php">
 		<label>Username: <input type="text" name="usernameReg"></label> <br>
 		<label>Password: <input type="password" name="password"></label> <br>
 
 		<input type="submit" value="Register">
 		<input type="reset" value="Reset">
               </form>
-		<form method='post' action="./anime.php">
+		<form method='post' action="./login.php">
 		</form>
               <br><br><br><br><br>
               <br><br><br><br><br>
