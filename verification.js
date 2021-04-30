@@ -4,6 +4,7 @@ function isEmail() {
 	if (!email.match(alphanum)){
 		return false;
 	}
+	return true;
 }
 
 function check(value) {
