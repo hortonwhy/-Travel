@@ -1,7 +1,8 @@
 function isEmail() {
-	var email = document.getElementById("email").value;
+	var email = document.forms["newsletter"]["email"].value;
 	var alphanum = /^[0-9a-zA-Z@]+$/;
 	if (!email.match(alphanum)){
+		alert("Please remove special characters.")
 		return false;
 	}
 	return true;
