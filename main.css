@@ -252,10 +252,6 @@ h4.black {
   padding:1%;
   margin:auto;
 }
-
-<<<<<<< Updated upstream
-
-=======
 #blogTable {
   margin-top: 8%;
   border: 2px solid black;
@@ -291,4 +287,4 @@ h4.black {
 #blogTitleLabel {
   text-align: center;
   vertical-align: middle;
->>>>>>> Stashed changes
+}

@@ -242,6 +242,8 @@ function printRegister() {
 
 		<input type="submit" value="Register" onclick='return isRegisterValid()'>
 		<input type="reset" value="Reset">
+		<p> Username should only contain Characters A-Z, a-z</p>
+		<p> Password six characters at least one number, one lowercase, and one uppercase</p> <br>
               </form>
 		<form method='post' action="./login.php">
 		</form>
