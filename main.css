@@ -96,6 +96,10 @@ svg .niigata:hover path.niigata{
   /*align:center;*/
 }
 
+#button {
+  text-align: center;
+}
+
 #description {
 
 }
