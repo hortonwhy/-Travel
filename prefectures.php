@@ -30,9 +30,9 @@
         </table>
     </div>
 
-    <div id="body">
+    <div id="body" class="default">
         <div id="description">
-            <div id="map">
+            <div id="map" class="default">
               <h3 class="align-center">Prefectures Index:</h3>
 		<table border=2 id="prefTable">
 	    <?php
@@ -53,6 +53,7 @@
 
 	    ?>
 		</table>
+		<br><br>
             </div>
 
         </div>

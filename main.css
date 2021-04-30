@@ -56,7 +56,6 @@ svg .niigata:hover path.niigata{
   margin-left: 4%;
   margin-right: 4%;
   overflow: auto;
-  background-color: #ffe7de;
 }
 
 #prefBody, #animeList {
@@ -254,4 +253,42 @@ h4.black {
   margin:auto;
 }
 
+<<<<<<< Updated upstream
 
+=======
+#blogTable {
+  margin-top: 8%;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.blogSubmit {
+  float: right;
+  margin: 0.5%;
+}
+
+.blogLabels {
+  width: 100px;
+  text-align: right;
+  padding: 5px;
+}
+
+#blogTitle {
+  width: 60%;
+}
+
+.blogInputs {
+  padding: 1%;
+}
+
+#bloggerName {
+  padding: 1.5%;
+  padding-left: 4%;
+}
+
+#blogTitleLabel {
+  text-align: center;
+  vertical-align: middle;
+>>>>>>> Stashed changes

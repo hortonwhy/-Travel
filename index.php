@@ -288,10 +288,6 @@
     <div id="blogs">
       <p>
         <?php
-          error_reporting(E_ALL);
-          ini_set("display_errors", "on");
-
-
           $server = "spring-2021.cs.utexas.edu";
           $user = "cs329e_bulko_cchen99";
           $pwd = "Fire_almond_jazz";
@@ -301,7 +297,8 @@
           $counter = 0;
           $blogposts = $mysqli->query("SELECT * FROM blogs ORDER BY id DESC"); 
           while(($row = $blogposts->fetch_array(MYSQLI_ASSOC)) && $counter <=2){
-            echo("<h4>$row[title]</h4><h5>Author:$row[author]</h5><p>$row[body]</p>");
+            echo("<h4>$row[title]</h4><h5>Author: $row[author]</h5><p>$row[body]</p>");
+
 	    //echo "$counter";
             $counter++;
           }
