@@ -44,12 +44,11 @@
 			echo "</tr>"."\n";
 			echo "<tr>";
 			$count = 3;
-			} else {
+			}
 			echo "<td>"."<a href="."'prefectures/".$val."'>".$val."</a>"."</td>";
 			$count = $count - 1;
 			}
 
-		}
 
 	    ?>
 		</table>
