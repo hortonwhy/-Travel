@@ -103,7 +103,7 @@ if (!isset($_SESSION["loggedIn"])) {
 		<form method='post' action="./anime.php">
             <p>
            
-		<br><input type="submit" name = "register" value = "Register">
+		<br><input type="submit" name = "register" value = "Register" class = "previewCenter">
           
             </p>
 		</form>
