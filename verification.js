@@ -1,11 +1,12 @@
 function isEmail() {
 	var email = document.forms["newsletter"]["email"].value;
-	var alphanum = /^[0-9a-zA-Z@]+$/;
-	if (!email.match(alphanum)){
-		alert("Please remove special characters.")
-		return false;
-	}
-	return true;
+	const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+	// if (!email.match(alphanum)){
+	// 	alert("Please remove special characters.")
+	// 	return false;
+	// }
+	// return true;
 }
 
 function check(value) {
