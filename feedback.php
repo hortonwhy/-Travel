@@ -23,6 +23,7 @@
     <meta name="description" content="ENTER DESCRIPTION HEcRE">
     <meta name="author" content="ENTER NAME HERE">
   <link rel="stylesheet" href="main.css">
+  <script src="script.js" defer></script>
   <script src="./jquery-3.6.0.js"></script>
   <script src="verification.js" defer></script>
 </head> 
