@@ -89,7 +89,7 @@ if (!isset($_SESSION["loggedIn"])) {
         <tr>
           <td>
 		<input type="submit" value="Login">
-		<input type="reset" value="Reset"><br>
+		<input type="reset" value="Reset">
 
            
             </p>
@@ -103,7 +103,7 @@ if (!isset($_SESSION["loggedIn"])) {
 		<form method='post' action="./anime.php">
             <p>
            
-		<input type="submit" name = "register" value = "Register">
+		<br><input type="submit" name = "register" value = "Register">
           
             </p>
 		</form>
