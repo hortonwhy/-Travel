@@ -6,8 +6,12 @@ if (!isset($_SESSION["loggedIn"])) {
 	$registering = false;
 	if ($_POST["usernameReg"]) {
 		if (registerUser($_POST["usernameReg"], $_POST["password"])) {
+			echo "Registration Successful";
 			$_SESSION["loggedIn"] = $_POST["usernameReg"];
-//			Header("Location: ./anime.php");
+			$loc = $_COOKIE["prevPage"];
+			setcookie("prevPage", "", time() - 100, "/");
+			Header("Location: ".$loc);
+			return;
 		} else {
 			$registering = true;
 			printRegister();
@@ -40,6 +44,7 @@ if (!isset($_SESSION["loggedIn"])) {
   <link rel="stylesheet" href="main.css">
   <script src="script.js" defer></script>
   <script src="AnimeList.js" defer></script>
+  <script src="login.js" defer></script>
   
 </head> 
 <body>
@@ -166,7 +171,7 @@ function verifyLogin ($u, $p) {
 }
 
 function registerUser($u, $p) {
-	echo $u . $p;
+	//echo $u . $p;
 	$server = "spring-2021.cs.utexas.edu";
 	$usr = "cs329e_bulko_cchen99";
 	$dbName = "cs329e_bulko_cchen99";
@@ -194,6 +199,7 @@ function registerUser($u, $p) {
 		echo "User Registered";
 		return true;
 	}
+	echo "Registration Unsuccessful. Pick an Unused Name";
 	return false;
 	
 
@@ -208,6 +214,7 @@ function printRegister() {
   <script src="script.js" defer></script>
   <script src="AnimeList.js" defer></script>
   <script src="verification.js" defer></script>
+  <script src="login.js" defer></script>
 </head> 
 <body>
 <a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
@@ -229,11 +236,11 @@ function printRegister() {
             <p>
             <div id="map">
 		<h4> Register </h4>
-              <form method='post' action="./login.php">
+              <form name='register' method='post' action="./login.php">
 		<label>Username: <input type="text" name="usernameReg"></label> <br>
 		<label>Password: <input type="password" name="password"></label> <br>
 
-		<input type="submit" value="Register">
+		<input type="submit" value="Register" onclick='return isRegisterValid()'>
 		<input type="reset" value="Reset">
               </form>
 		<form method='post' action="./login.php">
