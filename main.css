@@ -88,6 +88,14 @@ svg .niigata:hover path.niigata{
   height: 60%;
 }
 
+#login {
+  width: 85%;
+  margin: 10px auto;
+  height: 60%;
+  text-align:center;
+  align:center;
+}
+
 #description {
 
 }
