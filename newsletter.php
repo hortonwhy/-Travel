@@ -52,7 +52,7 @@
         <div id="description">
         
             <div id="map">
-            <form method="POST">
+            <form method="POST" name="newsletter">
                 <table class="newsletter_email">               
                     <tr>
                       <th colspan="2">
