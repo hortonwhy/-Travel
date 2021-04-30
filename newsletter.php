@@ -26,7 +26,7 @@
     <meta name="description" content="ENTER DESCRIPTION HEcRE">
     <meta name="author" content="ENTER NAME HERE">
   <link rel="stylesheet" href="main.css">
-  <script src="script.js" defer></script>
+  <script src="verification.js" defer></script>
 </head> 
 
 <body>
@@ -68,7 +68,7 @@
                     </tr>
                     <tr>
                           <td>
-                            <button type="submit" value="Register">Register</button>
+                            <button type="submit" value="Register" onclick="return isEmail()">Register</button>
                             <button type="reset" value="Reset">Reset</button>
                           </td>
                     </tr>

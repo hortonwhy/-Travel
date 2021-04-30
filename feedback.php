@@ -23,7 +23,8 @@
     <meta name="description" content="ENTER DESCRIPTION HEcRE">
     <meta name="author" content="ENTER NAME HERE">
   <link rel="stylesheet" href="main.css">
-  <script src="script.js" defer></script>
+  <script src="./jquery-3.6.0.js"></script>
+  <script src="verification.js" defer></script>
 </head> 
 
 <body>
@@ -48,7 +49,7 @@
         <div id="description">
             <p>
             <div id="map">
-            <form method="POST">
+            <form id="feedback" name="feedback" method="POST">
               <table class="feedback_table">               
                 <tr>
                   <th colspan="2">
@@ -61,7 +62,7 @@
                     <b>How did you hear about us? </b>
                   </td>
                   <td class="feedback_items">
-                    <select name="media" id="media" required>
+                    <select name="media" id="media">
                         <option value="null">-</option>
                         <option value="google">Google</option>
                         <option value="facebook">Facebook</option>
@@ -75,7 +76,7 @@
                     <b>How often do you watch anime?</b>
                   </td>
                   <td class="feedback_items">
-                    <label>Every day <input name="watch" type="radio" value="every day" required/></label>
+                    <label>Every day <input name="watch" type="radio" value="every day"/></label>
                     <label>2-3 times a week <input name="watch" type="radio" value="2-3" /></label>
                     <label>Few times a month <input name="watch" type="radio" value="few times" /></label>
                     <label>Rarely <input name="watch" type="radio" value="rarely" /></label>
@@ -87,7 +88,7 @@
                     <b>How satisfied are you with the website experience?</b>
                   </td>
                   <td class="feedback_items">
-                    <label>Very Satisfied <input name="rating" type="radio" value="very satisfied" required/></label>
+                    <label>Very Satisfied <input name="rating" type="radio" value="very satisfied"/></label>
                     <label>Satisfied <input name="rating" type="radio" value="satisfied" /></label>
                     <label>Neutral <input name="rating" type="radio" value="neutral" /></label>
                     <label>Unsatisfied <input name="rating" type="radio" value="unsatisfied" /></label>
@@ -99,7 +100,7 @@
                     <b>How likely are you to recommend our website to others?</b>
                   </td>
                   <td class="feedback_items">
-                    <label>Very Likely <input name="rec" type="radio" value="very likely" required/></label>
+                    <label>Very Likely <input name="rec" type="radio" value="very likely"/></label>
                     <label>Likely <input name="rec" type="radio" value="likely" /></label>
                     <label>Neutral <input name="rec" type="radio" value="neutral" /></label>
                     <label>Unlikely <input name="rec" type="radio" value="unlikely" /></label>
@@ -117,7 +118,7 @@
                 <tr>
                   <td>
                   <!--<input type="submit" value ="Submit" onclick="validateMail()">-->
-                    <button type="submit" value="Register">Register</button>
+                    <button type="submit" value="Register" onclick="return feedbackForm()">Register</button>
                     <button type="reset" value="Reset">Reset</button>
                   </td>
                 </tr>

@@ -38,8 +38,8 @@ if (!isset($_SESSION["loggedIn"])) {
 <head>
   <title>Dokidoki Travel</title>
   <link rel="stylesheet" href="main.css">
-  <script src="script.js" defer></script>
   <script src="AnimeList.js" defer></script>
+  
 </head> 
 <body>
 <a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
@@ -164,8 +164,9 @@ function printRegister() {
 <head>
   <title>Dokidoki Travel</title>
   <link rel="stylesheet" href="main.css">
-  <script src="script.js" defer></script>
+  <script src="jquery-3.6.0.min.js"></script>
   <script src="AnimeList.js" defer></script>
+  <script src="verification.js" defer></script>
 </head> 
 <body>
 <a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
@@ -234,8 +235,9 @@ print <<<PAGE1
 <head>
   <title>Dokidoki Travel</title>
   <link rel="stylesheet" href="main.css">
-  <script src="script.js" defer></script>
+  <script src="jquery-3.6.0.min.js"></script>
   <script src="AnimeList.js" defer></script>
+  <script src="verification.js" defer></script>
 </head> 
 <body>
 <a href="index.html"><img id="logo" src="assets/images/logo.png" alt="logo pic" width="125px"></a>
@@ -293,7 +295,6 @@ print <<<PAGE2
 <head>
     <title>Dokidoki Travel</title>
   <link rel="stylesheet" href="main.css">
-  <script src="script.js" defer></script>
   <script src="AnimeList.js" defer></script>
 </head> 
 
