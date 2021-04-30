@@ -57,36 +57,54 @@ if (!isset($_SESSION["loggedIn"])) {
         </table>
     </div>
 
+
+
+
+
     <div id="body">
         <div id="description">
             <p>
             <div id="map">
+    <table border = "1" style = "width:50%">
+        <tr>
+          <td>
             <form method='post' action="./anime.php">
             <p>
-            <div id = "Username">
+            
 		<label>Username: <input type="text" name="username"></label> <br>
-            </div>
+          </td>
+         </tr>
             
-            <div id = "Password">
+        <tr>
+          <td> 
 		<label>Password: <input type="password" name="password"></label> <br>
-            </div>
+          </td>
+        </tr>
             
-            <div id = "Submit">
+        <tr>
+          <td>
 		<input type="submit" value="Login">
 		<input type="reset" value="Reset">
-            </div>
+
+           
             </p>
+          </td>
+        </tr>
 
             </form>
 
-
+        <tr>
+          <td>
 		<form method='post' action="./anime.php">
             <p>
-            <div id = "Register">
+           
 		<input type="submit" name = "register" value = "Register">
-            </div>
+          
             </p>
 		</form>
+          </td>
+        </tr>
+    </table>
               <br><br><br><br><br>
               <br><br><br><br><br>
 
