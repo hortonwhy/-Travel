@@ -35,9 +35,15 @@ if ($change == 'true') {
 
 $result = $mysqli->query($query) or die ($mysqli->error);
 $j = 0;
+$count = 0;
 while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+
 	if ($j > $i && $j <= $end) {
-		echo "<h4>$row[title]</h4><h5>Author:$row[author]</h5><p>$row[body]</p>";
+		if ($count >= 3) {
+			$count = 0;
+		}
+		echo "<div id='blog$count'><h4>$row[title]</h4><h5>Author:$row[author]</h5><p>$row[body]</p></div>";
+		$count++;
 	}
 	$j++;
 }
