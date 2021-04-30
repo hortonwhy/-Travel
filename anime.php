@@ -82,7 +82,7 @@ if (!isset($_SESSION["loggedIn"])) {
             
         <tr>
           <td> 
-		<label>Password: <input type="password" name="password"></label> <br><br><br>
+		<label>Password: <input type="password" name="password"></label> <br><br>
           </td>
         </tr>
             
