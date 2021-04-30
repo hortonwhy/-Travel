@@ -65,7 +65,7 @@ if (!isset($_SESSION["loggedIn"])) {
         <div id="description">
             <p>
             <div id="map">
-    <table border = "1" style = "width:50%" class = "previewCenter">
+    <table border = "0" style = "width:50%" class = "previewCenter">
         <tr>
           <td>
             <form method='post' action="./anime.php">
