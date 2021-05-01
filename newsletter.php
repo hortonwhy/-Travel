@@ -48,7 +48,7 @@
         </table>
     </div>
 
-    <div id="body">
+    <div id="body" class="default">
         <div id="description">
         
             <div id="map">
