@@ -8,6 +8,7 @@ svg {
       width: 70%;
       margin-left: auto;
       margin-right: auto;
+      margin-top: 2%;
 }
 
 svg .hyogo:hover path.hyogo{
@@ -225,6 +226,11 @@ svg .niigata:hover path.niigata{
   background-color: #191919;
   color: #f2f2f2;
 }
+
+.white #blogs #blog0, .white #blogs #blog1, .white #blogs #blog2 {
+  border: 2px solid white;
+}
+
 h4.white {
   color: #f2f2f2;
 }
@@ -252,6 +258,7 @@ h4.black {
   padding:1%;
   margin:auto;
 }
+
 #blogTable {
   margin-top: 8%;
   border: 2px solid black;
@@ -272,7 +279,7 @@ h4.black {
 }
 
 #blogTitle {
-  width: 60%;
+  width: 80%;
 }
 
 .blogInputs {
@@ -281,10 +288,55 @@ h4.black {
 
 #bloggerName {
   padding: 1.5%;
-  padding-left: 4%;
+  padding-left: 6%;
 }
 
 #blogTitleLabel {
   text-align: center;
   vertical-align: middle;
+  padding-left: 5%;
+  margin-left: 4%;
+}
+
+#blogBody {
+  margin-left: 5%;
+  width: 80%;
+}
+
+
+#blog0, #blog1, #blog2 {
+  width: 25%;
+  float: left;
+  padding: 2%;
+  border: 2px solid black;
+  margin: 1%;
+  margin-bottom: 4%;
+  height: 300px;
+}
+
+#blog0 h4, #blog1 h4, #blog2 h4 {
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+#blog0 {
+  margin-left: 4%;
+}
+
+#blog0 h5, #blog1 h5, #blog2 h5 {
+  margin: 2px;
+  text-align: center;
+}
+
+#blogs {
+  text-align: center;
+}
+
+input[value="Previous Page"] {
+	margin: 5px;
+}
+
+#body h4 {
+	text-align: center;
 }

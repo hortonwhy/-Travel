@@ -66,7 +66,7 @@ if (!isset($_SESSION["loggedIn"])) {
 
 
 
-    <div id="body">
+    <div id="body" class="default">
         <div id="description">
             <p>
             <div id="map">
@@ -231,12 +231,12 @@ function printRegister() {
         </table>
     </div>
 
-    <div id="body">
+    <div id="body" class="default">
         <div id="description">
             <p>
             <div id="map">
-		<h4> Register </h4>
-              <form name='register' method='post' action="./login.php">
+		<h4> Register Below </h4>
+	      <form name='register' method='post' action="./login.php">
 		<label>Username: <input type="text" name="usernameReg"></label> <br>
 		<label>Password: <input type="password" name="password"></label> <br>
 

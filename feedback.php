@@ -46,7 +46,7 @@
         </table>
     </div>
 
-    <div id="body">
+    <div id="body" class="default">
         <div id="description">
             <p>
             <div id="map">
@@ -119,8 +119,8 @@
                 <tr>
                   <td>
                   <!--<input type="submit" value ="Submit" onclick="validateMail()">-->
-                    <button type="submit" value="Register" onclick="return feedbackForm()">Register</button>
-                    <button type="reset" value="Reset">Reset</button>
+                    <button type="submit" value="Register" onclick="return feedbackForm()">Submit Response</button>
+                    <button type="reset" value="Reset">Clear</button>
                   </td>
                 </tr>
               </table>
