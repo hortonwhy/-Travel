@@ -130,7 +130,7 @@ if (!isset($_SESSION["loggedIn"])) {
     </div>
 
     <div id="footer">
-        <p>Copyright © 3/09/2021  Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
+        <p>Copyright © 2021 Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
     </div>
 </body>
 
@@ -257,7 +257,7 @@ function printRegister() {
     </div>
 
     <div id="footer">
-        <p>Copyright © 3/09/2021  Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
+        <p>Copyright © 2021 Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
     </div>
 </body>
 
@@ -325,7 +325,7 @@ print <<<PAGE1
     </div>
 
     <div id="footer">
-        <p>Copyright © 3/09/2021  Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
+        <p>Copyright © 2021 Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
     </div>
 </body>
 
@@ -399,7 +399,7 @@ print <<<PAGE2CONT
     </div>
 
     <div id="footer">
-        <p>Copyright © 3/09/2021  Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
+        <p>Copyright © 2021 Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
     </div>
 </body>
 
@@ -464,7 +464,7 @@ print <<<LASTPAGE
     </div>
 
     <div id="footer">
-        <p>Copyright © 3/09/2021  Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
+        <p>Copyright © 2021 Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
     </div>
 </body>
 

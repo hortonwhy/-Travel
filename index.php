@@ -324,7 +324,7 @@
 
   </div>
   <div id="footer">
-    <p>Copyright © 3/09/2021 Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
+    <p>Copyright © 2021 Catherine Chen, Wyatt Horton, Rachel Kim, Jack Spicer</p>
   </div>
 </body>
 
