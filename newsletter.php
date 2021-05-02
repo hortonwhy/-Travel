@@ -63,7 +63,7 @@
                         <td>
                             <b>Please enter your email:</b>
                         </td>
-                          <td colspan="2" class="previewCenter">
+                          <td>
                             <input type="email" name="email" rows="5" cols="36" id="email"><br>
                           </td>
                     </tr>
