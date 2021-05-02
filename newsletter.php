@@ -64,7 +64,7 @@
                             <b>Please enter your email:</b>
                         </td>
                           <td>
-                            <input type="email" name="email" rows="5" cols="36" id="email"><br>
+                            <input type="email" name="email" id="email"><br>
                           </td>
                     </tr>
                     <tr>
