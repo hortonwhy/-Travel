@@ -63,7 +63,7 @@
                         <td>
                             <b>Please enter your email:</b>
                         </td>
-                          <td colspan="2" class="newsletter_email">
+                          <td colspan="2" class="previewCenter">
                             <input type="email" name="email" rows="5" cols="36" id="email"><br>
                           </td>
                     </tr>
@@ -71,12 +71,15 @@
                           <td>
                             <button type="submit" value="Register" onclick="return isEmail()">Register</button>
                             <button type="reset" value="Reset">Reset</button>
-                          </td>
+                        </td>
+                          
                     </tr>
+
+                </table>
                   
 
             </form>
-            </table>
+
             </div>
         </div>
 
