@@ -50,8 +50,10 @@ while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 	$val = $counter;
 	echo "<input id='counter' type='text' hidden value='$val'>";
 
+	echo "<div id='blogBtns'>";
 	echo "<input type=\"button\" value=\"Previous Page\" onclick='ajaxFunction(-3)'>";
 	echo "<input type=\"button\" value=\"Next Page\" onclick='ajaxFunction(3)'>";
 	echo "<p></p>";
+	echo "</div>";
 	return;
 ?>
