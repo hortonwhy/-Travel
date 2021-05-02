@@ -239,7 +239,7 @@ function printRegister() {
     <table border = "0" style = "width:50%" class = "previewCenter">
         <tr>
           <td>
-		        <h4> Register Below </h4>
+		        <h3> Register Below </h3>
           </td>
         </tr>
         <tr>
@@ -266,6 +266,7 @@ function printRegister() {
           </td>
         </tr>
 
+        <br><br><br>
             
         <tr>
           <td>
@@ -282,7 +283,7 @@ function printRegister() {
         </tr>
       </table>
               <br><br><br><br><br>
-              <br><br><br><br><br>
+              
             </div>
                 <!-- Content -->
             </p>

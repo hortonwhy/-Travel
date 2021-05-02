@@ -117,7 +117,7 @@ if (!isset($_SESSION["loggedIn"])) {
         </tr>
     </table>
               <br><br><br><br><br>
-              <br><br><br><br><br>
+              <br><br><br><br>
 
             </div>
                 <!-- Content -->
