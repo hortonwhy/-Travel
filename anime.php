@@ -105,8 +105,6 @@ if (!isset($_SESSION["loggedIn"])) {
             </form>
 
         <tr>
-
-        </table>
           <td>
 		<form method='post' action="./anime.php">
             <p>
