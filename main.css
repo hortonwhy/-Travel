@@ -346,6 +346,12 @@ h4.black {
   text-align: center;
 }
 
+#blogBtns {
+	float: left;
+	width: 100%;
+
+}
+
 input[value="Previous Page"] {
 	margin: 5px;
 }
