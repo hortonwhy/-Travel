@@ -68,7 +68,7 @@
                           </td>
                     </tr>
                     <tr>
-                          <td>
+                          <td class="previewCenter">
                             <button type="submit" value="Register" onclick="return isEmail()">Register</button>
                             <button type="reset" value="Reset">Reset</button>
                         </td>
