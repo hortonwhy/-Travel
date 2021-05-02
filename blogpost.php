@@ -82,7 +82,7 @@ if (count($_POST) != 0) {
                         Message
                     </td>
                     <td class="blogInputs">
-                        <textarea id="blogBody" name="body" rows="7" cols="50" maxlength="200"></textarea>
+                        <textarea id="blogBody" name="body" rows="7" cols="50" maxlength="200" required></textarea>
                     </td>
                 </tr>
                 <tr>
