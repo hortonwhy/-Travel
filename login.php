@@ -266,7 +266,7 @@ function printRegister() {
           </td>
         </tr>
 
-        <br><br><br><br><br>
+        <br><br>
             
         <tr>
           <td>
