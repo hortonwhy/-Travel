@@ -45,8 +45,10 @@
 			echo "<tr>";
 			$count = 3;
 			}
+			if ($val != "thumbnails" && $val != "template.html" ) {
 			echo "<td>"."<a href="."'prefectures/".$val."'>".$val."</a>"."</td>";
 			$count = $count - 1;
+			}
 			}
 
 
