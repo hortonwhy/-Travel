@@ -53,7 +53,7 @@
         
             <div id="map">
             <form method="POST" name="newsletter">
-                <table class="newsletter_email">               
+                <table border = "0" style = "width:50%" class= "previewCenter">               
                     <tr>
                       <th colspan="2">
                         <h2>Newsletter Sign-up</h2><br>
