@@ -74,7 +74,7 @@ if (count($_POST) != 0) {
                         Title
                     </td>
                     <td id="blogTitleLabel" class="blogInputs">
-                        <input type="text" id="blogTitle" name="title"required>
+                        <input type="text" id="blogTitle" name="title" maxlength="30" required>
                     </td>
                 </tr>
                 <tr>
