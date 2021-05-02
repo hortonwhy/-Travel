@@ -271,7 +271,7 @@ function printRegister() {
         <tr>
           <td>
 		<p> Username should only contain Characters A-Z, a-z</p>
-		<p> Password six characters at least one number, one lowercase, and one uppercase</p> <br>
+		<p> Password must contain six characters, at least one number, one lowercase, and one uppercase</p> <br>
           </td>
         </tr>
               </form>
