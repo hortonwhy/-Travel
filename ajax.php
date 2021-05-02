@@ -42,7 +42,7 @@ while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 		if ($count >= 3) {
 			$count = 0;
 		}
-		echo "<div id='blog$count'><h4>$row[title]</h4><h5>Author:$row[author]</h5><p>$row[body]</p></div>";
+		echo "<div id='blog$count'><h4>$row[title]</h4><h5>Author: $row[author]</h5><p>$row[body]</p></div>";
 		$count++;
 	}
 	$j++;
