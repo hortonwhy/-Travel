@@ -235,15 +235,44 @@ function printRegister() {
         <div id="description">
             <p>
             <div id="map">
-		<h4> Register Below </h4>
+    <table border = "0" style = "width:50%" class = "previewCenter">
+        <tr>
+          <td>
+		        <h4> Register Below </h4>
+          </td>
+        </tr>
+        <tr>
+          <td>
 	      <form name='register' method='post' action="./login.php">
-		<label>Username: <input type="text" name="usernameReg"></label> <br>
-		<label>Password: <input type="password" name="password"></label> <br>
+        <p>
 
+
+		<label>Username: <input type="text" name="usernameReg"></label> <br>
+    </td>
+    </tr>
+
+    <tr>
+          <td> 
+		<label>Password: <input type="password" name="password"></label> <br>
+          </td>
+      </tr>
+
+      <tr>
+          <td>
 		<input type="submit" value="Register" onclick='return isRegisterValid()'>
 		<input type="reset" value="Reset">
+
+            </p>
+          </td>
+        </tr>
+
+            
+        <tr>
+          <td>
 		<p> Username should only contain Characters A-Z, a-z</p>
 		<p> Password six characters at least one number, one lowercase, and one uppercase</p> <br>
+          </td>
+          </tr>
               </form>
 		<form method='post' action="./login.php">
 		</form>
