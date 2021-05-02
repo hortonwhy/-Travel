@@ -27,7 +27,8 @@ function isRegisterValid() {
 
 function validUser(u) {
 	// the input username should only contains characters A-Z, a-z, and -
-	var re = /^[a-zA-Z\-]+$/;
+	//var re = /^[a-zA-Z\-]+$/;
+	var re = "^[A-Za-z_][A-Za-z0-9_]{1,12}$";
 	return re.test(u);
 }
 
