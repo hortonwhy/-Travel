@@ -73,9 +73,10 @@
                             <button type="reset" value="Reset">Reset</button>
                           </td>
                     </tr>
-                  </table>
+                  
 
             </form>
+            </table>
             </div>
         </div>
 
