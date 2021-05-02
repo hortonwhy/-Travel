@@ -93,7 +93,7 @@ if (count($_POST) != 0) {
                 </tr>
                         <?php 
                             if ($posted == true){
-				echo "<tr><td>";
+				echo "<tr><td colspan='2'>";
                                 echo("Blog post has been posted successfully.<br>");
                                 echo("See your blog post <a href='index.php'>here</a>");
 				echo "</td></tr>";
