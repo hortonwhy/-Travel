@@ -123,6 +123,23 @@ svg .niigata:hover path.niigata{
   margin-right: auto;
 }
 
+#loginTable{
+	border: 2px solid black;
+	margin-top: 5%;
+	margin-left: auto;
+  	margin-right: auto;
+	font-size: 16px;
+	background: linear-gradient(
+		90deg,
+		#562135
+		#ffe7de
+		);
+}
+#loginTable h3 {
+	padding: 1%;
+	font-size: 20px;
+}
+
 .caption {
   padding: 0px;
   margin:0 auto;
@@ -200,7 +217,6 @@ svg .niigata:hover path.niigata{
 }
 
 .body-text {
-  font-size: 20px;
   line-height: 130%;
   font-family: Arial;
 }
@@ -209,7 +225,6 @@ svg .niigata:hover path.niigata{
   margin-left: auto;
   margin-right: auto;
   text-align:center;
-  font-size: 20px;
   line-height: 130%;
   font-family: Arial;
 }
@@ -292,8 +307,6 @@ h4.black {
 }
 
 #blogTitleLabel {
-  text-align: center;
-  vertical-align: middle;
   padding-left: 5%;
   margin-left: 4%;
 }

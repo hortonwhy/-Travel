@@ -70,7 +70,7 @@ if (!isset($_SESSION["loggedIn"])) {
         <div id="description">
             <p>
             <div id="map">
-    <table border = "0" style = "width:50%" class = "previewCenter">
+    <table id="loginTable" border="0" class="previewCenter">
         <tr>
           <td>
             <h3>Please Login or Register to Create an Account</h3>
@@ -236,7 +236,7 @@ function printRegister() {
             <p>
             <div id="map">
 
-    <table border = "0" style = "width:50%" class = "previewCenter">
+    <table id="loginTable" border="0" class="previewCenter">
         <tr>
           <td>
 		        <h3> Register Below </h3>

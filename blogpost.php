@@ -82,11 +82,7 @@ if (count($_POST) != 0) {
                         Message
                     </td>
                     <td class="blogInputs">
-<<<<<<< Updated upstream
-                        <textarea id="body" name="body" rows="7" cols="50" maxlength="200" required></textarea>
-=======
                         <textarea id="blogBody" name="body" rows="7" cols="50" maxlength="200"></textarea>
->>>>>>> Stashed changes
                     </td>
                 </tr>
                 <tr>
@@ -95,16 +91,14 @@ if (count($_POST) != 0) {
                         <button class="blogSubmit" type="submit" value="Submit">Submit Post</button>
                     </td>
                 </tr>
-                <tr>
-                    <td>
                         <?php 
                             if ($posted == true){
+				echo "<tr><td>";
                                 echo("Blog post has been posted successfully.<br>");
                                 echo("See your blog post <a href='index.php'>here</a>");
+				echo "</td></tr>";
                             }
                             ?>
-                    </td>
-                </tr>
             </table>
         </form>
 </body>
