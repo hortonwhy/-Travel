@@ -6,9 +6,22 @@
         $rating = $_POST['rating'];
         $rec = $_POST['rec'];
         $comments = $_POST['comments'];
-        $file = fopen('Data/opinions.txt', 'a');
-        fwrite($file, $media . ":" . $watch . ":" . $rating . ":" . $rec . ":" . $comments . "\n");
-        fclose($file);
+        
+        $server = "spring-2021.cs.utexas.edu";
+        $user = "cs329e_bulko_cchen99";
+        $pwd = "Fire_almond_jazz";
+        $dbName = "cs329e_bulko_cchen99";
+
+        $mysqli = new mysqli($server,$user,$pwd,$dbName);
+
+        $media = $mysqli->real_escape_string($media);
+        $watch = $mysqli->real_escape_string($watch);
+        $rating = $mysqli->real_escape_string($rating);
+        $rec = $mysqli->real_escape_string($rec);
+        $comments = $mysqli->real_escape_string($comments);
+
+        $mysqli->query("INSERT INTO feedbackForm VALUES (\"$media\", \"$watch\", \"$rating\", \"$rec\", \"$comments\")");   
+
     }
 ?>
 
@@ -135,3 +148,5 @@
 </body>
 
 </html>
+
+
