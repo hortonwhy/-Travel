@@ -22,7 +22,7 @@
 
         $mysqli->query("INSERT INTO feedbackForm VALUES (\"$media\", \"$watch\", \"$rating\", \"$rec\", \"$comments\")");   
         echo '<script>alert("Thank you, your feedback is appreciated!")</script>';
-        return true;
+        
 
     }
 ?>
