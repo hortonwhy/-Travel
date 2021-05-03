@@ -2,14 +2,20 @@
     if(count($_POST) != 0){
 
         $email = $_POST['email'];
-    
-        if($file = fopen('Data/emails.txt', 'a')) {
-            fwrite($file, $email . ":" . "\n");
-            echo '<script>alert("You have successfully signed up for the newsletter!")</script>';
-        };
 
-        
-        fclose($file);
+        $server = "spring-2021.cs.utexas.edu";
+        $user = "cs329e_bulko_cchen99";
+        $pwd = "Fire_almond_jazz";
+        $dbName = "cs329e_bulko_cchen99";
+
+        $mysqli = new mysqli($server,$user,$pwd,$dbName);
+
+        $email = $mysqli->real_escape_string($email);
+
+        $mysqli->query("INSERT INTO newsletterEmails VALUES (\"$email\")");  
+
+        echo '<script>alert("You have successfully signed up for the newsletter!")</script>';
+    
 
     }
 
