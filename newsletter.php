@@ -78,7 +78,7 @@
                 <table border="0" style = "width:50%" class= "previewCenter">
                     <tr>
                           <td class="previewCenter">
-                            <button type="submit" value="Register" onclick="return isEmail()">Register</button>
+                            <button type="submit" value="Register" onclick="return isEmail()">Signup</button>
                             <button type="reset" value="Reset">Reset</button>
                         </td>
                           

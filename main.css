@@ -279,7 +279,7 @@ h4.black {
   border: 2px solid black;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 55%;
 }
 
 .blogSubmit {
@@ -358,4 +358,9 @@ input[value="Previous Page"] {
 
 #body h4 {
 	text-align: center;
+}
+
+#newsletter {
+	margin-left: auto;
+	margin-right: auto;
 }
