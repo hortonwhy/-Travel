@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION["loggedIn"])) { 
 	setcookie("prevPage", "./blogpost.php", time() + 1500, "/");
-	Header("Location: ./anime.php");
+	Header("Location: ./login.php");
 }
 
 $author = $_SESSION['loggedIn'];
