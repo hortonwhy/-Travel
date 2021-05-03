@@ -21,6 +21,8 @@
         $comments = $mysqli->real_escape_string($comments);
 
         $mysqli->query("INSERT INTO feedbackForm VALUES (\"$media\", \"$watch\", \"$rating\", \"$rec\", \"$comments\")");   
+        echo "Thank you, your feedback is appreciated!";
+        return true;
 
     }
 ?>
