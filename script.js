@@ -1,7 +1,7 @@
 var showingDetail = false;
 var mouseX, mouseY;
 var OFFSETX = 20;
-var OFFSETY = -125;
+var OFFSETY = -10;
 
   //save mousePos for creating a box later
 function getMousePos(event) {
