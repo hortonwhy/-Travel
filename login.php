@@ -85,13 +85,13 @@ if (!isset($_SESSION["loggedIn"])) {
             <form method='post' action="./login.php">
             <p>
             
-		<label>Username: <input type="text" name="username"></label> <br>
+		<label>Username: <input type="text" name="username" required></label> <br>
           </td>
          </tr>
             
         <tr>
           <td> 
-		<label>Password: <input type="password" name="password"></label> <br><br>
+		<label>Password: <input type="password" name="password" required></label> <br><br>
           </td>
         </tr>
             
