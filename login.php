@@ -34,6 +34,10 @@ if (!isset($_SESSION["loggedIn"])) {
 				return;
 			}
 //			Header("Location: ./anime.php");
+		} else {
+			echo "<script>
+				alert('Incorrect Login Information')
+			      </script>";
 		}
 	}
 	if (!$registering) {
@@ -139,7 +143,7 @@ LOGIN;
 } 
 
 function verifyLogin ($u, $p) {
-	echo $u . $p;
+	//echo $u . $p;
 	$server = "spring-2021.cs.utexas.edu";
 	$usr = "cs329e_bulko_cchen99";
 	$dbName = "cs329e_bulko_cchen99";
@@ -165,7 +169,7 @@ function verifyLogin ($u, $p) {
 		echo "User Login Successful";
 		return true;
 	}
-	echo "Login Failed";
+	//echo "Login Failed";
 	return false;
 	
 }
