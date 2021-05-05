@@ -47,7 +47,7 @@
 			}
 			if ($val != "thumbnails" && $val != "template.html" ) {
 			$prefectures = explode(".", $val);
-			echo "<td>"."<a href="."'prefectures/".$val."'>".$prefectures[0]."</a>"."</td>";
+			print("<td><a href="."'prefectures/".$val."'> $prefectures[0] </a></td>");
 			$count = $count - 1;
 			}
 			}

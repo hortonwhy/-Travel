@@ -144,6 +144,10 @@ svg .niigata:hover path.niigata{
   padding: 1%;
 }
 
+#prefTable td {
+  text-align: center;
+  width: 155px;
+}
 .caption {
   padding: 0px;
   margin:0 auto;
