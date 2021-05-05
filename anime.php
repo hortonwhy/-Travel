@@ -374,7 +374,15 @@ PAGE2;
  $count = 0;
 foreach ($_POST['anime'] as $anime) {
 	$animeSelected[] = $anime;
-	print("<li> $anime </li>");
+
+	$arr = explode(" ", $anime);
+	$animeStr = $anime;
+	$anime = "";
+	for ($i = 0; $i < count($arr) - 1; $i++) {
+		$anime = $anime." ".$arr[$i];
+	}
+
+	print("<li> $anime <input type='checkbox' value='$animeStr' name='confirming[]' checked> </li>");
 	print("<br>");
 	$count++;
 }
@@ -408,8 +416,13 @@ PAGE2CONT;
 }
 
 function lastPage() {
-	$temp = $_SESSION['chooseAnime'];
-print <<<PAGE2
+	$temp = $_POST['confirming'];
+	$new = $_POST['anime'];
+	if (count($new) > 0) {
+	$temp = array_merge($temp, $new);
+	}
+	//$temp = $_SESSION['chooseAnime'];
+print <<<LASTPAGE
 
 <html lang="en">
 
@@ -442,15 +455,33 @@ print <<<PAGE2
             <p>
             <div id="map">
 	      <h3 class="align-center"></h3>
-PAGE2;
+LASTPAGE;
 $count = 0;
+	$file = "anime.txt";
+	$csv = fopen ($file, "w");
 foreach ($temp as $anime) {
+
+	$arr = explode(" ", $anime);
+	$anime = "";
+	for ($i = 0; $i < count($arr) - 1; $i++) {
+		$anime = $anime." ".$arr[$i];
+	}
+	$_SESSION["anime"] = $_SESSION["anime"].trim($anime)."\n";
+	fwrite($csv, trim($anime)."\n");
+
 	print("<li> $anime </li>");
 	print("<br>");
 	$count++;
+
+
 }
+	fclose($csv);
 print <<<LASTPAGE
 	<p><b> Amount Watched:</b> $count </p>	
+	<form method="post" action="download.php">
+	<input type='hidden' name='file' value='$file'>
+	<input type="submit" value="Download">
+	</form>
               <br><br><br><br><br>
               <br><br><br><br><br>
             </div>
