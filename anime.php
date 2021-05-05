@@ -368,7 +368,7 @@ print <<<PAGE2
             <p>
             <div id="map">
 	      <h3 class="align-center">Here is All the Anime You Selected. Please Confirm.</h3>
-<h4 class="align-center">If you missed any, you can select more from the table. Please reselect the ones listed as well.</h4>
+<h4 class="align-center">If you missed any, you can select more from the table.</h4>
 	      <form method='post' action="./anime.php">
 PAGE2;
  $count = 0;

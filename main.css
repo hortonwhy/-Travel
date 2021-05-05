@@ -140,6 +140,10 @@ svg .niigata:hover path.niigata{
 	font-size: 20px;
 }
 
+#animeList td {
+  padding: 1%;
+}
+
 .caption {
   padding: 0px;
   margin:0 auto;
